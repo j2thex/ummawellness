@@ -9,29 +9,29 @@ permalink: /retreats/
 Choose from our carefully curated selection of transformative wellness experiences, each designed to nurture your mind, body, and spirit in the world's most inspiring locations.
 
 <div class="retreats-grid">
-  <div class="retreat-card">
+  <a href="/retreats/bali-wellness-retreat/" class="retreat-card">
     <div class="retreat-image" style="background-image: url('/assets/images/bali-hero.jpg');">
       <div class="retreat-overlay">
         <h3>Bali Wellness Retreat</h3>
         <p class="location">Ubud, Bali, Indonesia</p>
         <p class="dates">November 16-23, 2025</p>
         <p class="price">€2,800</p>
-        <a href="/retreats/bali-wellness-retreat/" class="retreat-button">Learn More</a>
+        <span class="retreat-button">Learn More</span>
       </div>
     </div>
-  </div>
+  </a>
   
-  <div class="retreat-card">
+  <a href="/retreats/swiss-alps-retreat/" class="retreat-card">
     <div class="retreat-image" style="background-image: url('/assets/images/swiss-hero.jpg');">
       <div class="retreat-overlay">
         <h3>Swiss Alps Wellness Retreat</h3>
         <p class="location">Zermatt, Swiss Alps</p>
         <p class="dates">January 15-22, 2026</p>
         <p class="price">€3,200</p>
-        <a href="/retreats/swiss-alps-retreat/" class="retreat-button">Learn More</a>
+        <span class="retreat-button">Learn More</span>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 
 ## What Makes Our Retreats Special?

@@ -1,0 +1,546 @@
+---
+---
+
+// Import minima theme
+@import "minima";
+
+// Custom Variables
+$retreat-left-width: 50%;
+$retreat-overlay-opacity: 0.3;
+$retreat-content-bg: #faf8f5;
+$retreat-text-primary: #3d3d3d;
+$retreat-text-secondary: #4a4a4a;
+$retreat-cta-primary: #8b7355;
+$retreat-cta-hover: #6b5b47;
+$site-bg: #faf8f5;
+$text-primary: #3d3d3d;
+$text-secondary: #4a4a4a;
+$text-muted: #5a5a5a;
+$accent-brown: #8b7355;
+$accent-brown-hover: #6b5b47;
+$accent-light: #a08b6b;
+$footer-bg: #f5f2ed;
+$footer-border: #e8e0d5;
+
+// Global Overrides
+body {
+  background: $site-bg !important;
+  color: $text-primary !important;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+// Page content padding
+.page-content {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Force override any theme conflicts
+.retreat-card,
+.retreat-card * {
+  background: $accent-light !important;
+}
+
+// Typography Overrides
+h1, h2, h3 {
+  color: $text-primary !important;
+  font-weight: 600;
+}
+
+h1 { color: $text-primary !important; }
+h2 { color: $text-secondary !important; }
+h3 { color: $text-muted !important; }
+
+p {
+  color: $text-muted !important;
+  margin-bottom: 1rem;
+}
+
+// Navigation
+.site-header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $accent-brown;
+  text-decoration: none;
+  
+  &:hover {
+    color: $accent-brown-hover;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+
+  a {
+    color: $text-primary;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $accent-brown;
+      background: rgba($accent-brown, 0.1);
+    }
+  }
+}
+
+// Homepage Retreat Grid
+.retreats-grid {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.retreat-card {
+  background: $accent-light !important;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.retreat-image {
+  height: 250px;
+  background: {
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.6)
+    );
+  }
+}
+
+.retreat-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  color: white;
+
+  h2 {
+    color: white !important;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .location {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    color: $accent-light;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+.retreat-content {
+  padding: 2.5rem;
+
+  p {
+    margin-bottom: 1.5rem;
+    color: $text-muted;
+  }
+}
+
+// Add proper padding to retreat card text content
+.retreat-card h2,
+.retreat-card .location,
+.retreat-card .dates,
+.retreat-card .price,
+.retreat-card a {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.retreat-card h2 {
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.retreat-card .location,
+.retreat-card .dates {
+  margin-bottom: 0.5rem;
+}
+
+.retreat-card .price {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.retreat-card .retreat-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: $accent-brown;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  margin-bottom: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $accent-brown-hover;
+  }
+}
+
+.retreat-button {
+  display: inline-block;
+  background: $accent-brown;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: $accent-brown-hover;
+  }
+}
+
+// Lists
+ul {
+  li {
+    border-left: 3px solid $accent-light;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: $text-muted;
+
+    strong {
+      color: $accent-brown;
+    }
+  }
+}
+
+// Call to Action Section
+.cta-section {
+  background: linear-gradient(135deg, $accent-brown, $accent-light);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 4rem 0;
+
+  h2 {
+    color: white !important;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    color: $accent-brown;
+    background: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $footer-bg;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Footer Override
+.site-footer {
+  background: $footer-bg !important;
+  color: $text-primary !important;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid $footer-border;
+
+  p {
+    color: $text-primary !important;
+    margin: 0.5rem 0;
+  }
+}
+
+// Retreat Layout Styles
+.retreat-container {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.retreat-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: $retreat-left-width;
+  height: 100vh;
+  background: {
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, $retreat-overlay-opacity);
+  }
+}
+
+.retreat-title-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+
+  h1 {
+    color: white !important;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .location {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+
+  .dates {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+}
+
+.retreat-right {
+  margin-left: $retreat-left-width;
+  padding: 3rem;
+  background: $retreat-content-bg;
+}
+
+.retreat-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.retreat-meta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+
+  &.price {
+    background: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &.spots {
+    background: #007bff;
+    color: white;
+  }
+}
+
+.retreat-content {
+  line-height: 1.6;
+
+  h2 {
+    color: $retreat-text-primary !important;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    color: $retreat-text-secondary !important;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+  }
+
+  ul {
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.gallery {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background: $retreat-cta-primary;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: $retreat-cta-hover;
+  }
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #6c757d;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    color: #495057;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .retreats-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .cta-section {
+    padding: 3rem 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .retreat-container {
+    flex-direction: column;
+  }
+
+  .retreat-left {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .retreat-title-overlay {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .retreat-right {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  .retreat-meta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
