@@ -1,6 +1,6 @@
-# Ummawellness
+# Ummawellness 🌿✨
 
-A holistic wellness website built with Jekyll, focusing on mindfulness, sustainable living, and holistic health practices.
+A modern, responsive wellness and retreat website built with **Jekyll** - featuring beautiful retreat layouts with left-side hero images and right-side content, perfect for wellness businesses and retreat organizers.
 
 ## About
 
@@ -8,19 +8,23 @@ Ummawellness is dedicated to nurturing the whole person - mind, body, and spirit
 
 ## Features
 
-- **Clean, Modern Design** - Built with Jekyll and the Minima theme
-- **Responsive Layout** - Optimized for all devices
-- **Blog System** - Share wellness insights and tips
-- **Easy Customization** - Simple configuration and theming
-- **Fast Performance** - Static site generation for optimal speed
+- **🚀 Blazing Fast** - Built with Jekyll for instant page loads
+- **📱 Fully Responsive** - Mobile-first design for all devices
+- **🎨 Modern Design** - Clean, wellness-focused aesthetic with glassmorphism effects
+- **🏖️ Retreat-Focused Layout** - Left-side hero images with right-side content
+- **✨ Smooth Animations** - Hover effects and modern interactions
+- **🔍 SEO Optimized** - Perfect for wellness business visibility
+- **📱 Mobile Navigation** - Clean navigation for all devices
+- **🎯 Easy Content Management** - Simple markdown-based content creation
 
 ## Getting Started
 
 ### Prerequisites
 
-- Ruby (version 2.4.0 or higher)
+- Ruby (version 3.0.0 or higher)
 - RubyGems
 - GCC and Make
+- Git
 
 ### Installation
 
@@ -81,11 +85,16 @@ categories: wellness mindfulness
 
 ## Deployment
 
-### GitHub Pages
+### GitHub Pages (Recommended)
 
-1. Push your changes to the `main` branch
-2. Enable GitHub Pages in your repository settings
-3. Select the `main` branch as the source
+1. **Enable GitHub Pages** in your repository settings
+2. **Set source to GitHub Actions**
+3. **Push to main branch** - automatic deployment!
+
+The GitHub Actions workflow will:
+- Install dependencies
+- Build the Jekyll site
+- Deploy to GitHub Pages automatically
 
 ### Netlify
 
