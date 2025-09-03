@@ -1,0 +1,267 @@
+/* Ummawellness Custom Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Retreats Grid */
+.retreats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.retreat-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.retreat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.retreat-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.retreat-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.retreat-overlay h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.retreat-overlay .location {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.retreat-overlay .dates {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.retreat-overlay .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 1.5rem;
+}
+
+.retreat-button {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.retreat-button:hover {
+    background: #218838;
+    color: white;
+    text-decoration: none;
+}
+
+/* Features List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #28a745;
+}
+
+ul li strong {
+    color: #2c3e50;
+}
+
+/* Call to Action */
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2rem;
+}
+
+.cta-section a {
+    color: #667eea;
+    background: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-section a:hover {
+    transform: translateY(-2px);
+    color: #667eea;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .retreats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .retreat-image {
+        height: 250px;
+    }
+    
+    .retreat-overlay {
+        padding: 1.5rem;
+    }
+    
+    .retreat-overlay h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Navigation */
+.nav-bar {
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #28a745;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+}

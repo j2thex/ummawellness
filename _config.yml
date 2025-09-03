@@ -30,8 +30,11 @@ github_username: ummawellness
 
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
+plugins: []
+collections:
+  retreats:
+    output: true
+    permalink: /retreats/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <style>
+        .retreat-container {
+            display: flex;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .retreat-left {
+            flex: 1;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .retreat-left::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .retreat-title-overlay {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        
+        .retreat-title-overlay h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .retreat-title-overlay .location {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .retreat-title-overlay .dates {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .retreat-right {
+            flex: 1;
+            padding: 3rem;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+        
+        .retreat-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .retreat-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: 500;
+        }
+        
+        .price {
+            background: #28a745;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .spots {
+            background: #007bff;
+            color: white;
+        }
+        
+        .retreat-content {
+            line-height: 1.6;
+        }
+        
+        .retreat-content h2 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .retreat-content h3 {
+            color: #34495e;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        .retreat-content ul {
+            margin-bottom: 1rem;
+        }
+        
+        .retreat-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .cta-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #218838;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #6c757d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            color: #495057;
+        }
+        
+        @media (max-width: 768px) {
+            .retreat-container {
+                flex-direction: column;
+            }
+            
+            .retreat-left {
+                min-height: 300px;
+            }
+            
+            .retreat-title-overlay h1 {
+                font-size: 2rem;
+            }
+            
+            .retreat-right {
+                padding: 2rem 1rem;
+            }
+            
+            .retreat-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="retreat-container">
+        <div class="retreat-left" style="background-image: url('{{ page.hero_image }}');">
+            <div class="retreat-title-overlay">
+                <h1>{{ page.title }}</h1>
+                <div class="location">{{ page.location }}</div>
+                <div class="dates">{{ page.dates }}</div>
+            </div>
+        </div>
+        
+        <div class="retreat-right">
+            <a href="/" class="back-link">← Back to Retreats</a>
+            
+            <div class="retreat-header">
+                <div class="retreat-meta">
+                    <div class="meta-item">{{ page.duration }}</div>
+                    <div class="meta-item price">{{ page.price }}</div>
+                    <div class="meta-item spots">{{ page.available_spots }} spots left</div>
+                </div>
+            </div>
+            
+            <div class="retreat-content">
+                {{ content }}
+            </div>
+            
+            {% if page.gallery_images %}
+            <div class="gallery">
+                {% for image in page.gallery_images %}
+                <img src="{{ image }}" alt="Retreat image" loading="lazy">
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <div class="cta-section">
+                <h3>Ready to Transform Your Life?</h3>
+                <p>Secure your spot on this life-changing retreat experience.</p>
+                <a href="mailto:info@ummawellness.com?subject=Booking: {{ page.title }}" class="cta-button">Book Your Spot</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
