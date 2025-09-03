@@ -13,6 +13,16 @@
             overflow: hidden;
         }
         
+        html, body {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            height: 100%;
+        }
+        
+        body {
+            overflow-y: auto;
+        }
+        
         .retreat-left {
             flex: 1;
             position: fixed;
@@ -27,6 +37,7 @@
             align-items: center;
             justify-content: center;
             z-index: 1;
+            pointer-events: none;
         }
         
         .retreat-left::before {
@@ -45,6 +56,7 @@
             text-align: center;
             color: white;
             padding: 2rem;
+            pointer-events: auto;
         }
         
         .retreat-title-overlay h1 {
