@@ -1,128 +1,107 @@
-# Ummawellness 🌿✨
+# Ummawellness Website
 
-A modern, responsive wellness and retreat website built with **Jekyll** - featuring beautiful retreat layouts with left-side hero images and right-side content, perfect for wellness businesses and retreat organizers.
+A Jekyll-based wellness retreat website with a custom two-column layout for retreat pages.
 
-## About
+## How It Works
 
-Ummawellness is dedicated to nurturing the whole person - mind, body, and spirit - through sustainable practices and mindful living. Our platform provides guidance on holistic health, meditation, natural remedies, and eco-friendly lifestyle choices.
+- **Homepage (`/`)**: Displays retreat overview with clickable retreat cards
+- **Retreats Page (`/retreats/`)**: Lists all available retreats with detailed information
+- **Individual Retreat Pages**: Two-column layout with fixed left image and scrollable right content
+- **Navigation**: Top navigation bar with links to Home, About, and Retreats
+- **Styling**: Custom SCSS with warm brown/beige color scheme
 
-## Features
-
-- **🚀 Blazing Fast** - Built with Jekyll for instant page loads
-- **📱 Fully Responsive** - Mobile-first design for all devices
-- **🎨 Modern Design** - Clean, wellness-focused aesthetic with glassmorphism effects
-- **🏖️ Retreat-Focused Layout** - Left-side hero images with right-side content
-- **✨ Smooth Animations** - Hover effects and modern interactions
-- **🔍 SEO Optimized** - Perfect for wellness business visibility
-- **📱 Mobile Navigation** - Clean navigation for all devices
-- **🎯 Easy Content Management** - Simple markdown-based content creation
-
-## Getting Started
-
-### Prerequisites
-
-- Ruby (version 3.0.0 or higher)
-- RubyGems
-- GCC and Make
-- Git
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/ummawellness.git
-   cd ummawellness
-   ```
-
-2. Install Jekyll and other dependencies:
-   ```bash
-   bundle install
-   ```
-
-3. Start the development server:
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-4. Open your browser and navigate to `http://localhost:4000`
-
-## Development
-
-### Project Structure
+## File Structure
 
 ```
 ummawellness/
-├── _config.yml          # Site configuration
-├── _posts/              # Blog posts
-├── _layouts/            # HTML layouts
-├── _includes/           # Reusable components
-├── _sass/               # SCSS stylesheets
-├── assets/              # CSS, JS, and images
-├── about.markdown       # About page
-└── index.markdown       # Homepage
+├── _layouts/                 # HTML templates
+│   ├── default.html         # Base layout with navigation/footer
+│   └── retreat.html         # Two-column layout for retreat pages
+├── _retreats/               # Retreat content (Markdown files)
+│   ├── bali-wellness-retreat.md
+│   └── swiss-alps-retreat.md
+├── assets/                  # Styling and images
+│   ├── main.scss           # Main SCSS file (compiles to CSS)
+│   └── images/             # Retreat images
+├── _config.yml             # Jekyll configuration
+├── index.markdown          # Homepage
+├── about.markdown          # About page
+├── retreats.md             # Retreats index page
+└── CNAME                   # Custom domain configuration
 ```
 
-### Adding New Posts
+## Setup from Scratch
 
-Create new markdown files in the `_posts/` directory with the following format:
-`YYYY-MM-DD-title.markdown`
+### Prerequisites
+- Ruby 3.0+ and Bundler
+- Git
 
-Example front matter:
-```yaml
----
-layout: post
-title: "Your Post Title"
-date: YYYY-MM-DD HH:MM:SS +0000
-categories: wellness mindfulness
----
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/j2thex/ummawellness.git
+cd ummawellness
+
+# Install dependencies
+bundle install
+
+# Build the site
+bundle exec jekyll build
+
+# Start local server
+bundle exec jekyll serve --host 0.0.0.0 --port 4000
 ```
 
-### Customization
+### Local Development
+- **URL**: `http://localhost:4000`
+- **Auto-regeneration**: Enabled by default
+- **Port conflicts**: If port 4000 is busy, use `--port 4001`
 
-- **Site Settings**: Edit `_config.yml` for site-wide configuration
-- **Styling**: Modify SCSS files in `_sass/` directory
-- **Layouts**: Customize HTML templates in `_layouts/` directory
+## Adding New Retreats
+
+1. Create a new Markdown file in `_retreats/` directory
+2. Use the `retreat` layout in front matter
+3. Include required front matter:
+   ```yaml
+   ---
+   layout: retreat
+   title: "Retreat Name"
+   location: "City, Country"
+   dates: "Month Day-Day, Year"
+   price: "€X,XXX"
+   hero_image: "/assets/images/retreat-hero.jpg"
+   gallery_images:
+     - "/assets/images/retreat-1.jpg"
+     - "/assets/images/retreat-2.jpg"
+   available_spots: 8
+   ---
+   ```
+4. Add retreat card to `index.markdown` and `retreats.md`
+
+## Styling
+
+- **SCSS**: `assets/main.scss` contains all custom styles
+- **Theme**: Based on Jekyll's Minima theme with custom overrides
+- **Colors**: Warm brown palette (`#8b7355`, `#6b5b47`, `#a08b6b`)
+- **Layout**: CSS Grid for retreat cards, Flexbox for retreat pages
 
 ## Deployment
 
-### GitHub Pages (Recommended)
+- **Hosting**: GitHub Pages via GitHub Actions
+- **Workflow**: `.github/workflows/jekyll.yml`
+- **Domain**: `ummawellness.com` (configured via CNAME file)
+- **Branch**: `main` branch triggers automatic deployment
 
-1. **Enable GitHub Pages** in your repository settings
-2. **Set source to GitHub Actions**
-3. **Push to main branch** - automatic deployment!
+## Key Features
 
-The GitHub Actions workflow will:
-- Install dependencies
-- Build the Jekyll site
-- Deploy to GitHub Pages automatically
+- **Responsive Design**: Works on desktop and mobile
+- **Clickable Retreat Cards**: Entire cards are clickable, not just buttons
+- **Fixed Left Panel**: Retreat pages have sticky left image panel
+- **Custom Collections**: `_retreats` directory for retreat content
+- **SEO Optimized**: Proper meta tags and structured content
 
-### Netlify
+## Troubleshooting
 
-1. Connect your GitHub repository to Netlify
-2. Set build command: `bundle exec jekyll build`
-3. Set publish directory: `_site`
-
-### Manual Deployment
-
-1. Build the site:
-   ```bash
-   bundle exec jekyll build
-   ```
-
-2. Upload the `_site/` directory to your web server
-
-## Contributing
-
-We welcome contributions! Please feel free to submit pull requests or open issues for bugs and feature requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-For support and questions, please contact us at info@ummawellness.com or open an issue on GitHub.
-
----
-
-*Your wellness journey starts with a single step. Take that step with Ummawellness.*
+- **Port conflicts**: Kill existing Jekyll processes with `pkill -f "jekyll serve"`
+- **CSS not updating**: Clear browser cache or hard refresh
+- **Build errors**: Check Ruby version compatibility and run `bundle update`
