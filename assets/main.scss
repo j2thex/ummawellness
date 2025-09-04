@@ -1,46 +1,52 @@
 ---
 ---
 
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 // Import minima theme
 @import "minima";
 
 // Custom Variables
 $retreat-left-width: 50%;
 $retreat-overlay-opacity: 0.3;
-$retreat-content-bg: #faf8f5;
+$retreat-content-bg: #fefcf8;
 $retreat-text-primary: #3d3d3d;
 $retreat-text-secondary: #4a4a4a;
 $retreat-cta-primary: #8b7355;
 $retreat-cta-hover: #6b5b47;
-$site-bg: #faf8f5;
+$site-bg: #fefcf8;
 $text-primary: #3d3d3d;
 $text-secondary: #4a4a4a;
 $text-muted: #5a5a5a;
 $accent-brown: #8b7355;
 $accent-brown-hover: #6b5b47;
 $accent-light: #a08b6b;
-$footer-bg: #f5f2ed;
-$footer-border: #e8e0d5;
+$footer-bg: #fefcf8;
+$footer-border: #f0ebe5;
 
 // Global Overrides
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
 body {
   background: $site-bg !important;
   color: $text-primary !important;
   line-height: 1.6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 // Page content padding
 .page-content {
-  padding: 0 2rem;
+  padding: 4rem 2rem 0 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 // Force override any theme conflicts
-.retreat-card,
-.retreat-card * {
-  background: $accent-light !important;
+.retreat-card {
+  background: transparent !important;
 }
 
 // Typography Overrides
@@ -49,7 +55,11 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-h1 { color: $text-primary !important; }
+h1 { 
+  color: $text-primary !important; 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 h2 { color: $text-secondary !important; }
 h3 { color: $text-muted !important; }
 
@@ -60,7 +70,7 @@ p {
 
 // Navigation
 .site-header {
-  background: white;
+  background: #fefcf8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -82,6 +92,8 @@ p {
   font-weight: bold;
   color: $accent-brown;
   text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   
   &:hover {
     color: $accent-brown-hover;
@@ -121,7 +133,7 @@ p {
 }
 
 .retreat-card {
-  background: $accent-light !important;
+  background: transparent !important;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -257,7 +269,6 @@ p {
 // Lists
 ul {
   li {
-    border-left: 3px solid $accent-light;
     padding-left: 1rem;
     margin-bottom: 0.5rem;
     color: $text-muted;
@@ -323,7 +334,7 @@ ul {
 // Retreat Layout Styles
 .retreat-container {
   display: flex;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .retreat-left {
@@ -398,7 +409,7 @@ ul {
 }
 
 .meta-item {
-  background: white;
+  background: #fefcf8;
   padding: 0.5rem 1rem;
   border-radius: 25px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
