@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+</head>
+<body>
+    <div class="hero-container">
+        <!-- Fixed Left Image (33%) -->
+        <div class="hero-left" style="background-image: url('{{ page.hero_left_image }}');">
+            <div class="hero-title-overlay">
+                <h1>{{ page.hero_title | default: site.title }}</h1>
+                <div class="hero-subtitle">{{ page.hero_subtitle | default: "Transform Your Life with Wellness Retreats" }}</div>
+                <div class="hero-cta">
+                    <a href="#retreats" class="hero-button">Explore Retreats</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scrollable Right Images (67%) -->
+        <div class="hero-right">
+            <div class="hero-scrollable">
+                <!-- First Right Image -->
+                <div class="hero-image-section" style="background-image: url('{{ page.hero_right_image_1 }}');">
+                    <div class="hero-image-overlay">
+                        <h2>{{ page.hero_right_title_1 | default: "Mindfulness & Meditation" }}</h2>
+                        <p>{{ page.hero_right_text_1 | default: "Discover inner peace through guided meditation and mindfulness practices in serene natural settings." }}</p>
+                    </div>
+                </div>
+                
+                <!-- Second Right Image -->
+                <div class="hero-image-section" style="background-image: url('{{ page.hero_right_image_2 }}');">
+                    <div class="hero-image-overlay">
+                        <h2>{{ page.hero_right_title_2 | default: "Yoga & Movement" }}</h2>
+                        <p>{{ page.hero_right_text_2 | default: "Connect with your body through daily yoga sessions and mindful movement practices." }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 {{ site.title }}. All rights reserved.</p>
+        <p>Transform your life with our wellness retreats.</p>
+    </footer>
+
+    {% include chat-widget.html %}
+
+    <script>
+        // Smooth scrolling for hero button
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroButton = document.querySelector('.hero-button');
+            if (heroButton) {
+                heroButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector('#retreats');
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            }
+
+            // FAQ Accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const isActive = faqItem.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        faqItem.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

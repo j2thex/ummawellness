@@ -13,13 +13,13 @@ $retreat-overlay-opacity: 0.3;
 $retreat-content-bg: #fefcf8;
 $retreat-text-primary: #3d3d3d;
 $retreat-text-secondary: #4a4a4a;
-$retreat-cta-primary: #8b7355;
+$retreat-cta-primary: #a8d5a8;
 $retreat-cta-hover: #6b5b47;
 $site-bg: #fefcf8;
 $text-primary: #3d3d3d;
 $text-secondary: #4a4a4a;
 $text-muted: #5a5a5a;
-$accent-brown: #8b7355;
+$accent-brown: #a8d5a8;
 $accent-brown-hover: #6b5b47;
 $accent-light: #a08b6b;
 $footer-bg: #fefcf8;
@@ -33,6 +33,7 @@ $footer-border: #f0ebe5;
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,6 +52,19 @@ body {
   margin: 0 auto;
   width: 100%;
   overflow-x: hidden;
+}
+
+// Hero layout specific page content
+.hero-container + .page-content {
+  margin-left: 33.333%;
+  width: 66.667%;
+  max-width: none;
+}
+
+// Hero layout specific footer
+.hero-container ~ .site-footer {
+  margin-left: 33.333%;
+  width: 66.667%;
 }
 
 // Force override any theme conflicts
@@ -173,6 +187,13 @@ p {
   gap: 2rem;
   width: 100%;
   overflow-x: hidden;
+}
+
+// Hero layout specific retreats grid
+.hero-container ~ .page-content .retreats-grid {
+  max-width: none;
+  margin: 3rem 0;
+  padding: 0 2rem;
 }
 
 .retreat-card {
@@ -322,6 +343,199 @@ ul {
   }
 }
 
+// FAQ Section
+.faq-section {
+  margin: 4rem 0;
+  max-width: 800px;
+}
+
+// Intergram Chat Widget Styles
+#intergram-widget {
+  z-index: 9999 !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+// Ensure Intergram iframe is visible and properly sized
+iframe[src*="intergram.xyz"] {
+  z-index: 9999 !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  display: block !important;
+  visibility: visible !important;
+  max-width: 400px !important;
+  max-height: 500px !important;
+  width: 370px !important;
+  height: 450px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
+  border: none !important;
+  // Remove position adjustments - focus on size
+}
+
+// Fix chat content overflow issues
+iframe[src*="intergram.xyz"] body {
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Ensure chat widget container has proper overflow handling
+.intergram-widget,
+#intergram-widget {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+// Chat widget container adjustments
+.intergram-widget {
+  max-width: 400px !important;
+  max-height: 500px !important;
+  width: 350px !important;
+  height: 400px !important;
+}
+
+// Additional chat content fixes
+iframe[src*="intergram.xyz"] * {
+  box-sizing: border-box !important;
+}
+
+// Fix first message positioning
+iframe[src*="intergram.xyz"] .message:first-child,
+iframe[src*="intergram.xyz"] .chat-message:first-child {
+  margin-top: 0 !important;
+  padding-top: 5px !important;
+}
+
+// Ensure chat content starts immediately after header
+iframe[src*="intergram.xyz"] .chat-content,
+iframe[src*="intergram.xyz"] .messages-area {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+// Fix chat message container positioning
+iframe[src*="intergram.xyz"] .chat-container,
+iframe[src*="intergram.xyz"] .messages-container,
+iframe[src*="intergram.xyz"] .chat-messages {
+  max-height: 300px !important;
+  overflow-y: auto !important;
+  padding-top: 5px !important;
+  padding-bottom: 10px !important;
+  margin-top: 0 !important;
+}
+
+// Mobile adjustments for chat widget
+@media (max-width: 768px) {
+  iframe[src*="intergram.xyz"] {
+    max-width: calc(100vw - 40px) !important;
+    max-height: calc(100vh - 100px) !important;
+    width: calc(100vw - 40px) !important;
+    height: calc(100vh - 100px) !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    left: 10px !important;
+  }
+  
+  .intergram-widget {
+    max-width: calc(100vw - 40px) !important;
+    max-height: calc(100vh - 100px) !important;
+    width: calc(100vw - 40px) !important;
+    height: calc(100vh - 100px) !important;
+  }
+  
+  // Mobile chat content fixes
+  iframe[src*="intergram.xyz"] .chat-container,
+  iframe[src*="intergram.xyz"] .messages-container,
+  iframe[src*="intergram.xyz"] .chat-messages {
+    max-height: calc(100vh - 200px) !important;
+  }
+}
+
+.faq-item {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.faq-question {
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fefcf8;
+  border-bottom: 1px solid #e9ecef;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: #f8f6f2;
+  }
+
+  h3 {
+    color: $text-primary !important;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .faq-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $accent-brown;
+    transition: transform 0.3s ease;
+    min-width: 24px;
+    text-align: center;
+  }
+}
+
+.faq-answer {
+  padding: 0 2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+
+  p {
+    color: $text-muted !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 1.5rem 0;
+  }
+}
+
+.faq-item.active {
+  .faq-question {
+    background: #f8f6f2;
+    border-bottom-color: $accent-brown;
+  }
+
+  .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 200px;
+    padding: 0 2rem;
+  }
+}
+
 // Call to Action Section
 .cta-section {
   background: linear-gradient(135deg, $accent-brown, $accent-light);
@@ -371,6 +585,146 @@ ul {
   p {
     color: $text-primary !important;
     margin: 0.5rem 0;
+  }
+}
+
+// Hero Layout Styles
+.hero-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.hero-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 33.333%;
+  height: 100vh;
+  background: {
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.hero-title-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 90%;
+
+  h1 {
+    color: white !important;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.4;
+  }
+
+  .hero-button {
+    display: inline-block;
+    background: $accent-brown;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background: $accent-brown-hover;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.hero-right {
+  margin-left: 33.333%;
+  width: 66.667%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.hero-scrollable {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.hero-image-section {
+  width: 50%;
+  height: 100vh;
+  background: {
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.hero-image-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 3rem;
+  max-width: 80%;
+
+  h2 {
+    color: white !important;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -602,6 +956,12 @@ ul {
     gap: 1.5rem;
   }
 
+  // Reset hero layout specific retreats grid on mobile
+  .hero-container ~ .page-content .retreats-grid {
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+
   .retreat-card {
     min-width: 0; // Prevent grid items from overflowing
   }
@@ -623,6 +983,31 @@ ul {
   }
 
   // CTA section mobile
+  // FAQ mobile styles
+  .faq-section {
+    margin: 3rem 0;
+  }
+
+  .faq-question {
+    padding: 1.2rem 1.5rem;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem;
+
+    p {
+      padding: 1.2rem 0;
+    }
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 1.5rem;
+  }
+
   .cta-section {
     padding: 3rem 1rem;
     margin: 3rem 0;
@@ -631,6 +1016,70 @@ ul {
       font-size: 2rem;
     }
 
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  // Hero layout mobile
+  .hero-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-left {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+  }
+
+  .hero-title-overlay {
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+  }
+
+  .hero-right {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  // Reset content width constraints on mobile
+  .hero-container + .page-content {
+    margin-left: 0;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .hero-container ~ .site-footer {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hero-scrollable {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-image-section {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+  }
+
+  .hero-image-overlay {
+    padding: 2rem;
+    
+    h2 {
+      font-size: 2.2rem;
+    }
+    
     p {
       font-size: 1.1rem;
     }
@@ -684,6 +1133,34 @@ ul {
     font-size: 1.4rem;
   }
 
+  // Hero extra small screens
+  .hero-title-overlay {
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    
+    .hero-button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .hero-image-overlay {
+    padding: 1.5rem;
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+
   .retreats-grid {
     padding: 0 0.5rem;
   }
@@ -694,6 +1171,28 @@ ul {
     h3 {
       font-size: 1.3rem;
     }
+  }
+
+  // FAQ extra small screens
+  .faq-question {
+    padding: 1rem 1rem;
+
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .faq-answer {
+    padding: 0 1rem;
+
+    p {
+      padding: 1rem 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 1rem;
   }
 
   .cta-section {

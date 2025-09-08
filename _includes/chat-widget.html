@@ -1,0 +1,22 @@
+{% if site.chat.enabled %}
+<!-- Intergram Chat Widget -->
+<script>
+    window.intergramId = "{{ site.chat.bot_id }}";
+    
+    window.intergramCustomizations = {
+        titleClosed: '{{ site.chat.title_closed }}',
+        titleOpen: '{{ site.chat.title_open }}',
+        introMessage: '{{ site.chat.intro_message }}',
+        autoResponse: '{{ site.chat.auto_response }}',
+        autoNoResponse: '{{ site.chat.auto_response }}',
+        placeholderText: '{{ site.chat.placeholder_text }}',
+        closedStyle: 'chat',
+        closedChatAvatars: true,
+        cookieExpiration: 1,
+        introMessageDelay: 0,
+        mainColor: '{{ site.chat.main_color }}',
+        alwaysUseFloatingButton: {% if site.chat.always_use_floating_button %}true{% else %}false{% endif %}
+    };
+</script>
+<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+{% endif %}
