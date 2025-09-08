@@ -15,7 +15,12 @@
     <nav class="nav-bar">
         <div class="nav-container">
             <a href="/" class="nav-logo">{{ site.title }}</a>
-            <ul class="nav-menu">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/retreats/">Retreats</a></li>
                 <li><a href="/about/">About</a></li>
@@ -32,5 +37,27 @@
         <p>&copy; 2025 {{ site.title }}. All rights reserved.</p>
         <p>Transform your life with our wellness retreats.</p>
     </footer>
+
+    <script>
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
