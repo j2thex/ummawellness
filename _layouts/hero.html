@@ -22,19 +22,43 @@
         <!-- Scrollable Right Images (67%) -->
         <div class="hero-right">
             <div class="hero-scrollable">
-                <!-- First Right Image -->
-                <div class="hero-image-section" style="background-image: url('{{ page.hero_right_image_1 }}');">
-                    <div class="hero-image-overlay">
-                        <h2>{{ page.hero_right_title_1 | default: "Mindfulness & Meditation" }}</h2>
-                        <p>{{ page.hero_right_text_1 | default: "Discover inner peace through guided meditation and mindfulness practices in serene natural settings." }}</p>
+                <!-- First Right Image with Flip -->
+                <div class="hero-image-section flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_1 }}');">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="flip-content">
+                                <h3>{{ page.hero_right_title_1 | default: "Mindfulness & Meditation" }}</h3>
+                                <p>Experience deep relaxation and mental clarity through our guided meditation sessions. Our expert instructors will help you develop mindfulness techniques that you can carry with you long after your retreat ends.</p>
+                                <ul>
+                                    <li>Daily guided meditation sessions</li>
+                                    <li>Mindfulness walking practices</li>
+                                    <li>Breathing techniques</li>
+                                    <li>Stress reduction methods</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Second Right Image -->
-                <div class="hero-image-section" style="background-image: url('{{ page.hero_right_image_2 }}');">
-                    <div class="hero-image-overlay">
-                        <h2>{{ page.hero_right_title_2 | default: "Yoga & Movement" }}</h2>
-                        <p>{{ page.hero_right_text_2 | default: "Connect with your body through daily yoga sessions and mindful movement practices." }}</p>
+                <!-- Second Right Image with Flip -->
+                <div class="hero-image-section flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_2 }}');">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="flip-content">
+                                <h3>{{ page.hero_right_title_2 | default: "Yoga & Movement" }}</h3>
+                                <p>Strengthen your body and mind through our diverse yoga and movement practices. From gentle Hatha to dynamic Vinyasa, find the practice that speaks to your soul.</p>
+                                <ul>
+                                    <li>Morning and evening yoga sessions</li>
+                                    <li>Multiple yoga styles available</li>
+                                    <li>Personalized instruction</li>
+                                    <li>Movement meditation</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,6 +113,11 @@
                 });
             });
         });
+
+        // Flip card functionality
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
     </script>
 </body>
 </html>
