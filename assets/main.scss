@@ -608,8 +608,10 @@ iframe[src*="intergram.xyz"] .chat-messages {
     repeat: no-repeat;
   }
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 2rem;
 
   &::before {
     content: '';
@@ -622,6 +624,23 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
 }
 
+// Logo styles
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 2rem;
+
+  .logo-text {
+    color: white !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.2em;
+    margin: 0;
+  }
+}
+
 .hero-title-overlay {
   position: relative;
   z-index: 2;
@@ -630,7 +649,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
   padding: 2rem;
   max-width: 90%;
 
-  h1 {
+  h2 {
     color: white !important;
     font-size: 3.5rem;
     margin-bottom: 1rem;
@@ -666,6 +685,72 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
 }
 
+// Retreat details styles
+.hero-retreat-details {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .retreat-info {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+
+    h3 {
+      color: white !important;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .retreat-location {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .retreat-pricing {
+      margin-bottom: 1.5rem;
+
+      .early-bird-price {
+        color: $accent-brown !important;
+        font-size: 1.4rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .regular-price {
+        color: rgba(255, 255, 255, 0.7) !important;
+        font-size: 1.2rem;
+        text-decoration: line-through;
+        display: block;
+      }
+    }
+
+    .buy-retreat-button {
+      display: inline-block;
+      background: $accent-brown;
+      color: white;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        background: $accent-brown-hover;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}
+
 .hero-right {
   margin-left: 33.333%;
   width: 66.667%;
@@ -676,13 +761,19 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
 .hero-scrollable {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh;
+}
+
+.hero-image-row {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
 }
 
 .hero-image-section {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   background: {
     size: cover;
     position: center;
@@ -705,19 +796,23 @@ iframe[src*="intergram.xyz"] .chat-messages {
 }
 
 .hero-image-overlay {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
   text-align: center;
   color: white;
-  padding: 3rem;
-  max-width: 80%;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
 
   h2 {
     color: white !important;
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2.2rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     font-weight: 600;
+    letter-spacing: 0.1em;
   }
 
   p {
@@ -1032,10 +1127,51 @@ iframe[src*="intergram.xyz"] .chat-messages {
     width: 100%;
     height: 100vh;
     min-height: 500px;
+    padding: 1rem;
+  }
+
+  .hero-logo {
+    margin-top: 1rem;
+
+    .logo-text {
+      font-size: 1.5rem;
+      letter-spacing: 0.15em;
+    }
+  }
+
+  .hero-retreat-details {
+    margin-bottom: 1rem;
+
+    .retreat-info {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .retreat-location {
+        font-size: 1.1rem;
+      }
+
+      .retreat-pricing {
+        .early-bird-price {
+          font-size: 1.2rem;
+        }
+
+        .regular-price {
+          font-size: 1rem;
+        }
+      }
+
+      .buy-retreat-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+      }
+    }
   }
 
   .hero-title-overlay {
-    h1 {
+    h2 {
       font-size: 2.5rem;
     }
     
@@ -1067,6 +1203,11 @@ iframe[src*="intergram.xyz"] .chat-messages {
     height: auto;
   }
 
+  .hero-image-row {
+    flex-direction: column;
+    height: auto;
+  }
+
   .hero-image-section {
     width: 100%;
     height: 100vh;
@@ -1074,10 +1215,10 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
 
   .hero-image-overlay {
-    padding: 2rem;
+    padding: 1.5rem;
     
     h2 {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
     }
     
     p {

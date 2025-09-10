@@ -10,11 +10,21 @@
     <div class="hero-container">
         <!-- Fixed Left Image (33%) -->
         <div class="hero-left" style="background-image: url('{{ page.hero_left_image }}');">
-            <div class="hero-title-overlay">
-                <h1>{{ page.hero_title | default: site.title }}</h1>
-                <div class="hero-subtitle">{{ page.hero_subtitle | default: "Transform Your Life with Wellness Retreats" }}</div>
-                <div class="hero-cta">
-                    <a href="#retreats" class="hero-button">Explore Retreats</a>
+            <!-- Logo at top -->
+            <div class="hero-logo">
+                <h1 class="logo-text">UMMAWELLNESS</h1>
+            </div>
+            
+            <!-- Retreat details at bottom -->
+            <div class="hero-retreat-details">
+                <div class="retreat-info">
+                    <h3>1 week wellness retreat</h3>
+                    <p class="retreat-location">Location: Bali</p>
+                    <div class="retreat-pricing">
+                        <span class="early-bird-price">Early bird €3,200</span>
+                        <span class="regular-price">€3,600</span>
+                    </div>
+                    <a href="#retreats" class="buy-retreat-button">Buy Retreat</a>
                 </div>
             </div>
         </div>
@@ -22,41 +32,73 @@
         <!-- Scrollable Right Images (67%) -->
         <div class="hero-right">
             <div class="hero-scrollable">
-                <!-- First Right Image with Flip -->
-                <div class="hero-image-section flip-card" onclick="flipCard(this)">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_1 }}');">
+                <!-- Top Row -->
+                <div class="hero-image-row">
+                    <!-- First Right Image with Flip -->
+                    <div class="hero-image-section flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_1 }}');">
+                                <div class="hero-image-overlay">
+                                    <h2>ABOUT</h2>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-content">
+                                    <p>Join our carefully curated journey of gentle awakening. Reconnect with life through yoga, somatic practices, mindful movement and restorative stillness. A supportive space to awaken your inner creativity, nurture self-love and return to your true sense of purpose.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flip-card-back">
-                            <div class="flip-content">
-                                <h3>{{ page.hero_right_title_1 | default: "Mindfulness & Meditation" }}</h3>
-                                <p>Experience deep relaxation and mental clarity through our guided meditation sessions. Our expert instructors will help you develop mindfulness techniques that you can carry with you long after your retreat ends.</p>
-                                <ul>
-                                    <li>Daily guided meditation sessions</li>
-                                    <li>Mindfulness walking practices</li>
-                                    <li>Breathing techniques</li>
-                                    <li>Stress reduction methods</li>
-                                </ul>
+                    </div>
+                    
+                    <!-- Second Right Image with Flip -->
+                    <div class="hero-image-section flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_2 }}');">
+                                <div class="hero-image-overlay">
+                                    <h2>YOGA FOR BODY & MIND</h2>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-content">
+                                    <p>Each day we gather for yoga - gentle, grounding practices designed to support both body and mind. Through breath, movement and presence, we create space to soften, release and return to ourselves.</p>
+                                    <p>All levels are welcome - whether you are new to yoga or have practiced for years. These sessions are an invitation to reconnect with your body, cultivate balance, and rediscover a sense of inner calm.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Second Right Image with Flip -->
-                <div class="hero-image-section flip-card" onclick="flipCard(this)">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_2 }}');">
+                <!-- Bottom Row -->
+                <div class="hero-image-row">
+                    <!-- Third Right Image with Flip -->
+                    <div class="hero-image-section flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_3 }}');">
+                                <div class="hero-image-overlay">
+                                    <h2>Ubud & Uluwatu: A Journey in Two Landscapes</h2>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-content">
+                                    <p>Your retreat unfolds in two distinct sanctuaries. The first three nights are spent in a serene resort in Ubud, embraced by jungle landscapes and the calming rhythm of nature. The journey then continues with three nights in a private villa on the cliffs of Uluwatu, where the vast ocean horizon invites deep rest and reflection. Accommodation will be in shared double rooms, offering comfort and connection throughout the journey. Both settings are chosen with care to provide tranquility and inspiration - spaces that hold you gently and support your renewal.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flip-card-back">
-                            <div class="flip-content">
-                                <h3>{{ page.hero_right_title_2 | default: "Yoga & Movement" }}</h3>
-                                <p>Strengthen your body and mind through our diverse yoga and movement practices. From gentle Hatha to dynamic Vinyasa, find the practice that speaks to your soul.</p>
-                                <ul>
-                                    <li>Morning and evening yoga sessions</li>
-                                    <li>Multiple yoga styles available</li>
-                                    <li>Personalized instruction</li>
-                                    <li>Movement meditation</li>
-                                </ul>
+                    </div>
+                    
+                    <!-- Fourth Right Image with Flip -->
+                    <div class="hero-image-section flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_4 }}');">
+                                <div class="hero-image-overlay">
+                                    <h2>Circles of Healing and Presence</h2>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="flip-content">
+                                    <p>Throughout the retreat you will be guided through a variety of practices — from meditation and sound healing to therapeutic group work. Each session is designed to support emotional wellbeing, release tension and invite deeper clarity.</p>
+                                    <p>These circles become moments of stillness and connection, offering a safe and nurturing space for restoration, inner balance and renewal.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

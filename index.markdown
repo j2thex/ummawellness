@@ -6,10 +6,16 @@ hero_subtitle: "Discover wellness retreats in the world's most inspiring locatio
 hero_left_image: "/assets/images/bali-hero.jpg"
 hero_right_image_1: "/assets/images/bali-yoga.jpg"
 hero_right_image_2: "/assets/images/swiss-mountains.jpg"
+hero_right_image_3: "/assets/images/bali-nature.jpg"
+hero_right_image_4: "/assets/images/swiss-spa.jpg"
 hero_right_title_1: "Mindfulness & Meditation"
 hero_right_text_1: "Discover inner peace through guided meditation and mindfulness practices in serene natural settings."
 hero_right_title_2: "Yoga & Movement"
 hero_right_text_2: "Connect with your body through daily yoga sessions and mindful movement practices."
+hero_right_title_3: "Nature & Adventure"
+hero_right_text_3: "Connect with nature through guided hikes and outdoor activities in breathtaking landscapes."
+hero_right_title_4: "Wellness & Nutrition"
+hero_right_text_4: "Nourish your body with wholesome, organic meals and learn about holistic nutrition."
 ---
 
 ## Discover Our Transformative Retreats
