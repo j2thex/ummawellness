@@ -61,61 +61,61 @@ Immerse yourself in life-changing wellness experiences designed to nurture your 
 <div class="faq-section">
   <div class="faq-item">
     <div class="faq-question">
-      <h3>What's included in the retreat price?</h3>
+      <h3>ARRIVAL</h3>
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-answer">
-      <p>Your retreat includes accommodation, all meals (organic and locally sourced), daily yoga and meditation sessions, wellness workshops, nature activities, airport transfers, and all retreat materials. The only additional costs are flights, travel insurance, and personal expenses.</p>
+      <p>Your journey begins on Sunday, making it easy to travel after the working week and arrive with a clear mind. All guests will be provided with a comfortable airport transfer, ensuring a smooth and stress-free start to the retreat. From the moment you land, everything is taken care of, allowing you to settle in, exhale, and gently ease into the days ahead.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-question">
-      <h3>Do I need yoga experience to join?</h3>
+      <h3>FOOD PREFERENCES</h3>
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-answer">
-      <p>Not at all! Our retreats welcome all levels, from complete beginners to advanced practitioners. Our experienced instructors will guide you through practices suitable for your level and help you progress at your own pace.</p>
+      <p>Your meals can be gently tailored to honor your body’s needs - whether vegetarian, mindful preferences, or specific allergies - ensuring nourishment that feels good and supportive.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-question">
-      <h3>What should I pack for the retreat?</h3>
+      <h3>DO I NEED TO HAVE YOGA EXPERIENCE TO JOIN THE RETREAT?</h3>
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-answer">
-      <p>We'll send you a detailed packing list after booking, but essentials include comfortable yoga clothes, a journal, sunscreen, and an open mind. All yoga mats and props are provided at the retreat locations.</p>
+      <p>Not at all - all levels are welcome. Whether you are completely new to yoga or have been practicing for years, our sessions are designed to be accessible, supportive, and enriching for everyone.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-question">
-      <h3>Can I come alone or should I bring a friend?</h3>
+      <h3>IS THIS RETREAT WORTH IT FOR SOLO TRAVELERS?</h3>
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-answer">
-      <p>Many of our participants come alone and leave with lifelong friends! Our intimate group size (max 8 people) creates a supportive community atmosphere. However, you're welcome to bring a friend or partner if you prefer.</p>
+      <p>Yes, absolutely. This retreat is ideal for solo travelers - you’ll find a welcoming community, opportunities for meaningful connections, and plenty of space for personal reflection.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-question">
-      <h3>What's the cancellation policy?</h3>
+      <h3>CAN I SKIP ACTIVITIES?</h3>
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-answer">
-      <p>We offer full refunds minus a €200 processing fee if cancelled 60+ days before the retreat. 50% refund for cancellations 30-59 days before. Unfortunately, no refunds for cancellations within 30 days, but we can help you transfer to a future retreat.</p>
+      <p>Yes, absolutely. All activities are optional - you’re free to skip a practice, workshop or excursion if you prefer to rest or simply enjoy quiet time. This is your retreat, and you are invited to honor your own rhythm.</p>
     </div>
   </div>
 
   <div class="faq-item">
     <div class="faq-question">
-      <h3>Are the retreats suitable for dietary restrictions?</h3>
+      <h3>EXTENDED STAY OPTIONS</h3>
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-answer">
-      <p>Absolutely! We accommodate all dietary needs including vegetarian, vegan, gluten-free, and food allergies. Please let us know your requirements when booking, and our chefs will prepare delicious meals tailored to your needs.</p>
+      <p>We offer a complimentary concierge service to support your travel plans. If you wish to spend more days in Bali before or after the retreat, we’ll be happy to take care of the arrangements and make your stay seamless.</p>
     </div>
   </div>
 </div>
