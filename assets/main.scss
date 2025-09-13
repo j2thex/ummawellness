@@ -1501,6 +1501,15 @@ iframe[src*="intergram.xyz"] .chat-messages {
     padding: 2rem;
   }
   
+  // Hide hero image overlay and arrow icons when card is flipped (Safari fix)
+  &.flipped .hero-image-overlay {
+    display: none !important;
+  }
+  
+  &.flipped .flip-arrow {
+    display: none !important;
+  }
+  
   .flip-content {
     color: white;
     text-align: center;
