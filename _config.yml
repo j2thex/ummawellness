@@ -43,6 +43,13 @@ chat:
 # Build settings
 theme: minima
 plugins: []
+
+# Sass configuration to suppress all deprecation warnings
+sass:
+  quiet_deps: true
+  silence_deprecations: ["import", "color-functions", "global-builtin", "bogus-combinators", "strict-unary", "function-units"]
+  verbose: false
+
 collections:
   retreats:
     output: true
