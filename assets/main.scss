@@ -598,10 +598,10 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
 .hero-left {
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 33.333%;
-  height: 100vh;
+  left: 0.125rem;
+  top: 0.125rem;
+  width: calc(33.333% - 0.25rem);
+  height: calc(100vh - 0.25rem);
   background: {
     size: cover;
     position: center;
@@ -612,6 +612,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  border-radius: 10px;
 
   &::before {
     content: '';
@@ -620,7 +621,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: transparent;
   }
 }
 
@@ -763,22 +764,24 @@ iframe[src*="intergram.xyz"] .chat-messages {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  padding: 0.125rem;
 }
 
 .hero-image-row {
   display: flex;
   flex-direction: row;
   height: 50vh;
+  gap: 0.25rem;
+  padding: 0.125rem;
 }
 
 .hero-image-section {
   width: 50%;
   height: 100%;
-  background: {
-    size: cover;
-    position: center;
-    repeat: no-repeat;
-  }
+  background: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -791,7 +794,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
   }
 }
 
@@ -887,7 +890,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: transparent;
     z-index: 1;
   }
   
@@ -1458,6 +1461,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
 .flip-card {
   cursor: pointer;
   perspective: 1000px;
+  background: white;
   
   .flip-card-inner {
     position: relative;
@@ -1466,6 +1470,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    background: white;
   }
   
   &.flipped .flip-card-inner {
