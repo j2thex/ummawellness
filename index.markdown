@@ -18,43 +18,6 @@ hero_right_title_4: "Wellness & Nutrition"
 hero_right_text_4: "Nourish your body with wholesome, organic meals and learn about holistic nutrition."
 ---
 
-## Discover Our Transformative Retreats
-
-Immerse yourself in life-changing wellness experiences designed to nurture your mind, body, and spirit. Each retreat is carefully crafted to provide deep transformation in the world's most inspiring locations.
-
-<div id="retreats" class="retreats-grid">
-  <a href="/retreats/bali-wellness-retreat/" class="retreat-card">
-    <div class="retreat-image" style="background-image: url('/assets/images/bali-hero.jpg');">
-      <div class="retreat-overlay">
-        <h3>Bali Wellness Retreat</h3>
-        <p class="location">Ubud, Bali, Indonesia</p>
-        <p class="dates">November 16-23, 2025</p>
-        <p class="price">€2,800</p>
-        <span class="retreat-button">Learn More</span>
-      </div>
-    </div>
-  </a>
-  
-  <a href="/retreats/swiss-alps-retreat/" class="retreat-card">
-    <div class="retreat-image" style="background-image: url('/assets/images/swiss-hero.jpg');">
-      <div class="retreat-overlay">
-        <h3>Swiss Alps Wellness Retreat</h3>
-        <p class="location">Zermatt, Swiss Alps</p>
-        <p class="dates">January 15-22, 2026</p>
-        <p class="price">€3,200</p>
-        <span class="retreat-button">Learn More</span>
-      </div>
-    </div>
-  </a>
-</div>
-
-## Why Choose Ummawellness Retreats?
-
-- **Expert Guidance** - Led by certified wellness professionals and local healers
-- **Small Groups** - Intimate experiences with maximum 8 participants
-- **Authentic Locations** - Carefully selected destinations for optimal healing energy
-- **Holistic Approach** - Comprehensive wellness covering mind, body, and spirit
-- **Sustainable Tourism** - Supporting local communities and eco-friendly practices
 
 ## Frequently Asked Questions
 
