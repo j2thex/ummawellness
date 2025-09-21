@@ -837,33 +837,59 @@ iframe[src*="intergram.xyz"] .chat-messages {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+  }
+}
+
+// Hero section flip icons
+.hero-image-section .flip-icon {
   border: 2px solid rgba(255, 255, 255, 0.8);
 
   &:hover {
     border-color: rgba(255, 255, 255, 1);
     transform: scale(1.1);
   }
+}
 
-  svg {
-    width: 20px;
-    height: 20px;
-    color: white;
-    stroke-width: 2;
+// Included cards flip icons
+.included-card .flip-icon {
+  border: 2px solid #e9ecef;
+
+  &:hover {
+    border-color: #3d3d3d;
+    transform: scale(1.1);
   }
 }
 
-.flip-arrow svg {
+// Hero section arrows should be white
+.hero-image-section .flip-arrow svg {
   color: white;
 }
 
-.flip-close svg {
+.hero-image-section .flip-close svg {
   color: white;
 }
 
-// Flip card back styling with blurred background
+// Included cards arrows should be black
+.included-card .flip-arrow svg {
+  color: #3d3d3d;
+}
+
+.included-card .flip-close svg {
+  color: #3d3d3d;
+}
+
+// Flip card back styling
 .flip-card-back {
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
   &::before {
     content: '';
@@ -890,23 +916,20 @@ iframe[src*="intergram.xyz"] .chat-messages {
     left: 0;
     right: 0;
     bottom: 0;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.3); // Dark overlay for better text readability
     z-index: 1;
-  }
-  
-  .flip-icon,
-  .flip-content {
-    position: relative;
-    z-index: 2;
   }
   
   .flip-icon {
     position: absolute;
     top: 1rem;
     right: 1rem;
+    z-index: 2;
   }
   
   .flip-content {
+    position: relative;
+    z-index: 2;
     color: white !important;
     
     p {
@@ -1458,6 +1481,88 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
 }
 
+// Included Section Styles
+.included-section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.included-cards {
+  display: flex;
+  gap: 0.25rem;
+  height: 10vh; // 1/10 of hero section height
+  min-height: 80px;
+  padding: 0.125rem;
+  transition: height 0.3s ease;
+  
+  // Increase height when any card is flipped
+  &.expanded {
+    height: 50vh; // Much larger height when flipped
+    min-height: 400px;
+  }
+}
+
+.included-card {
+  flex: 1;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  perspective: 1000px;
+  border: 1px solid #e9ecef;
+}
+
+.included-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  text-align: left;
+  color: #3d3d3d;
+  padding: 1rem;
+  
+  h2 {
+    color: #3d3d3d !important;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 400;
+    font-stretch: condensed;
+  }
+}
+
+// Mobile styles for included section
+@media (max-width: 768px) {
+  .included-cards {
+    flex-direction: column;
+    height: 20vh; // Slightly taller on mobile for better usability
+    min-height: 120px;
+    gap: 0.25rem;
+    
+    &.expanded {
+      height: 60vh; // Much taller on mobile when flipped
+      min-height: 500px;
+    }
+  }
+  
+  .included-card {
+    height: 50%;
+  }
+  
+  .included-overlay {
+    padding: 0.8rem;
+    
+    h2 {
+      font-size: 1rem;
+    }
+  }
+}
+
 // Flip Card Styles
 .flip-card {
   cursor: pointer;
@@ -1494,12 +1599,13 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
   
   .flip-card-back {
-    background: linear-gradient(135deg, #a8d5a8, #8bc34a);
+    background: white;
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    border: 1px solid #e9ecef;
   }
   
   // Hide hero image overlay and arrow icons when card is flipped (Safari fix)
@@ -1515,18 +1621,20 @@ iframe[src*="intergram.xyz"] .chat-messages {
     color: white;
     text-align: center;
     max-width: 90%;
+    padding: 1rem;
     
     h3 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
       font-weight: 600;
+      color: white;
     }
     
     p {
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
-      opacity: 0.95;
+      color: white;
     }
     
     ul {
@@ -1535,18 +1643,26 @@ iframe[src*="intergram.xyz"] .chat-messages {
       text-align: left;
       
       li {
-        padding: 0.5rem 0;
-        font-size: 0.9rem;
-        position: relative;
-        padding-left: 1.5rem;
-        
-        &:before {
-          content: "✓";
-          position: absolute;
-          left: 0;
-          color: #4caf50;
-          font-weight: bold;
-        }
+        padding: 0.3rem 0;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        color: white;
+        padding-left: 0;
+      }
+    }
+  }
+  
+  // Specific styles for included cards
+  &.included-card {
+    .flip-content {
+      padding: 0.8rem;
+      
+      ul li {
+        font-size: 0.75rem;
+        padding: 0.2rem 0;
+        line-height: 1.3;
+        padding-left: 0;
+        color: white;
       }
     }
   }

@@ -19,7 +19,78 @@ hero_right_text_4: "Nourish your body with wholesome, organic meals and learn ab
 ---
 
 
-## Frequently Asked Questions
+<div class="included-section">
+  <div class="included-cards">
+    <!-- What's Included Card -->
+    <div class="included-card flip-card" onclick="flipCard(this)">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="flip-icon flip-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="included-overlay">
+            <h2>WHAT'S INCLUDED</h2>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="flip-icon flip-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="flip-content">
+            <ul>
+              <li>7 days / 6 nights accommodation</li>
+              <li>Daily yoga practices</li>
+              <li>Sound healing, therapeutic and meditation sessions</li>
+              <li>Sacred waterfall experience & purification ritual</li>
+              <li>Spa days in a cliff-top wellness sanctuary</li>
+              <li>Jamu workshop</li>
+              <li>Two nourishing meals per day</li>
+              <li>Airport transfers</li>
+              <li>Concierge support</li>
+              <li>Wellness gift set</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- What's Not Included Card -->
+    <div class="included-card flip-card" onclick="flipCard(this)">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="flip-icon flip-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="included-overlay">
+            <h2>WHAT'S NOT INCLUDED</h2>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="flip-icon flip-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="flip-content">
+            <ul>
+              <li>International flights to/from Bali</li>
+              <li>Travel & health insurance</li>
+              <li>Visa fees (if applicable)</li>
+              <li>Personal expenses & additional activities outside the program</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="faq-section">
   <div class="faq-item">

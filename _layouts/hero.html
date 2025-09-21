@@ -199,6 +199,17 @@
         // Flip card functionality
         function flipCard(card) {
             card.classList.toggle('flipped');
+            
+            // Handle included cards height expansion
+            const includedCards = document.querySelector('.included-cards');
+            if (includedCards && card.closest('.included-cards')) {
+                const hasFlippedCard = includedCards.querySelector('.flip-card.flipped');
+                if (hasFlippedCard) {
+                    includedCards.classList.add('expanded');
+                } else {
+                    includedCards.classList.remove('expanded');
+                }
+            }
         }
     </script>
 </body>
