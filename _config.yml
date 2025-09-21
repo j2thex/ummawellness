@@ -31,7 +31,7 @@ github_username: ummawellness
 # Chat widget configuration
 chat:
   enabled: true
-  bot_id: "754940" # Your unique chat ID from Intergram bot
+  bot_id: "5296111783" # Your unique chat ID from Intergram bot
   title_closed: "Chat with us!"
   title_open: "Ummawellness Support"
   intro_message: "Hi! How can we help you with your wellness journey?"
