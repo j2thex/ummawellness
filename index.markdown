@@ -91,6 +91,85 @@ hero_right_text_4: "Nourish your body with wholesome, organic meals and learn ab
   </div>
 </div>
 
+## PROGRAM
+
+<div class="program-section">
+  <div class="program-day-item">
+    <div class="program-day-question">
+      <h3>DAY 1. UBUD - ARRIVAL & WELCOME</h3>
+      <span class="program-day-icon">+</span>
+    </div>
+    <div class="program-day-answer">
+      <p>You will be warmly greeted upon arrival at Denpasar airport with a private transfer to our serene resort in Ubud. If you arrive a couple of days earlier, pickup can be arranged from any location on the island. After settling in and taking time to rest, the group will gather in the evening for a welcome dinner in one of Ubud's top restaurants - the perfect moment to meet, connect, and begin the journey together.</p>
+    </div>
+  </div>
+
+  <div class="program-day-item">
+    <div class="program-day-question">
+      <h3>DAY 2. UBUD - FLOW & RENEWAL</h3>
+      <span class="program-day-icon">+</span>
+    </div>
+    <div class="program-day-answer">
+      <p>The day begins with a nourishing breakfast at the resort, followed by a morning yoga practice and a therapeutic group session to support reflection and inner balance. Afterward, we enjoy a wholesome lunch at a restaurant overlooking Bali's iconic rice terraces, and then continue to one of the island's most beautiful waterfalls - a place to reconnect with nature's flow and feel deeply refreshed.</p>
+      <p>The evening is left free: you may choose to be dropped off in central Ubud to wander and dine at your own pace, or return to the resort to rest and enjoy dinner nearby.</p>
+    </div>
+  </div>
+
+  <div class="program-day-item">
+    <div class="program-day-question">
+      <h3>DAY 3. UBUD - RITUALS & RENEWAL</h3>
+      <span class="program-day-icon">+</span>
+    </div>
+    <div class="program-day-answer">
+      <p>The morning begins with a wholesome breakfast, followed by a yoga session combined with sound healing and a group therapy session - a practice to open the body, calm the mind, and awaken inner clarity. Afterward, we travel to a sacred site for a traditional purification ritual, releasing what no longer serves and inviting renewal. A nourishing lunch in a beautiful restaurant awaits nearby, offering time to integrate the experience.</p>
+      <p>After the lunch, you'll join a Jamu workshop, learning to prepare Bali's traditional herbal tonic made from roots and spices. The evening is free, allowing space for solitude, reflection, or exploring at your own rhythm.</p>
+    </div>
+  </div>
+
+  <div class="program-day-item">
+    <div class="program-day-question">
+      <h3>DAY 4. ULUWATU - TRANSITION TO THE OCEAN</h3>
+      <span class="program-day-icon">+</span>
+    </div>
+    <div class="program-day-answer">
+      <p>After breakfast we gather and journey from the jungles of Ubud to the cliffs of Uluwatu. Upon arrival, we settle into a private villa and enjoy a nourishing lunch prepared by our chef. In the afternoon, a restorative sound healing session invites relaxation and renewal.</p>
+      <p>The rest of the day is free: you may unwind at the villa, watch the sunset on one of Uluwatu's iconic beaches, enjoy dinner at one of the best restaurants, or book a massage at a trusted local spa we'll be happy to recommend.</p>
+    </div>
+  </div>
+
+  <div class="program-day-item">
+    <div class="program-day-question">
+      <h3>DAY 5. ULUWATU - SPA SANCTUARY & DEEP RESTORATION</h3>
+      <span class="program-day-icon">+</span>
+    </div>
+    <div class="program-day-answer">
+      <p>The day begins with a nourishing breakfast prepared by our private chef at the villa. We then head to one of Bali's most renowned wellness sanctuaries, set on the cliffs with breathtaking ocean views. Here, you'll enjoy a guided yoga session followed by a full morning to immerse yourself in the space: infinity pool overlooking the sea, sauna and steam rooms, hot and cold plunge pools, meditation areas, and tranquil lounges designed for deep relaxation. For those who wish, additional experiences such as a cryotherapy chamber and other advanced wellness treatments can be booked separately.</p>
+      <p>After a restorative lunch at the sanctuary's restaurant, the rest of the day is yours - a free evening to relax, watch the sunset, or enjoy dinner at your own pace.</p>
+    </div>
+  </div>
+
+  <div class="program-day-item">
+    <div class="program-day-question">
+      <h3>DAY 6. ULUWATU - RENEWAL & CLOSING CEREMONY</h3>
+      <span class="program-day-icon">+</span>
+    </div>
+    <div class="program-day-answer">
+      <p>After the breakfast, we return to the spa sanctuary for a second day of restoration, knowing how deeply our guests will have connected with its healing atmosphere. The morning offers yoga and time to once again enjoy its facilities. After the spa, the afternoon is free to rest or spend time in stillness.</p>
+      <p>As the sun begins to set, we gather for a traditional Balinese ceremony at Uluwatu Temple, honoring the spirit of the island and the journey we've shared. The day closes with a farewell dinner by the ocean, celebrating connection, gratitude, and the soft integration of all that has unfolded.</p>
+    </div>
+  </div>
+
+  <div class="program-day-item">
+    <div class="program-day-question">
+      <h3>DAY 7. ULUWATU - INTEGRATION & DEPARTURE</h3>
+      <span class="program-day-icon">+</span>
+    </div>
+    <div class="program-day-answer">
+      <p>Our final morning begins with a breakfast, followed by a closing therapeutic circle and meditation - a gentle space to integrate the journey, reflect, and carry its energy forward. After gathering and preparing for departure, private transfers will take you to the airport or to any other destination on the island.</p>
+    </div>
+  </div>
+</div>
+
 ## FAQ
 
 <div class="faq-section">
@@ -161,17 +240,23 @@ hero_right_text_4: "Nourish your body with wholesome, organic meals and learn ab
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-answer">
-      <p>We offer a complimentary concierge service to support your travel plans. If you wish to spend more days in Bali before or after the retreat, we’ll be happy to take care of the arrangements and make your stay seamless.</p>
+      <p>We offer a complimentary concierge service to support your travel plans. If you wish to spend more days in Bali before or after the retreat, we'll be happy to take care of the arrangements and make your stay seamless.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>WHAT IS THE BOOKING AND CANCELATION POLICY?</h3>
+      <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>To secure your place, a non-refundable deposit of €1000 is required at the time of booking.
+If you book before 15 November, you receive the early bird price — the remaining balance is €2200, payable by 15 November.
+After 15 November, the balance increases to €2600 (full retreat price).
+In case of cancellation, you may transfer your spot to another participant (subject to approval).
+
+</p>
     </div>
   </div>
 </div>
 
-## What to Expect
 
-Each retreat includes daily yoga, meditation, wellness workshops, nature activities, and plenty of time for personal reflection. You'll return home with practical tools for maintaining wellness in your daily life, plus memories that will last a lifetime.
-
-## Ready to Begin Your Journey?
-
-Choose a retreat that calls to your soul and take the first step toward transformation. Our team is here to support you every step of the way.
-
-*Contact us at info@ummawellness.com to learn more or book your spot.*

@@ -343,10 +343,114 @@ ul {
   }
 }
 
+// Program Section
+.program-section {
+  margin: 1rem 0 4rem 0;
+  max-width: 800px;
+}
+
+.program-day-item {
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 0;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.program-day-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3d3d3d;
+    margin: 0;
+    font-stretch: condensed;
+  }
+}
+
+.program-day-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #3d3d3d;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.program-day-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.program-day-item.active {
+  .program-day-answer {
+    max-height: 1000px;
+    padding-bottom: 1.5rem;
+  }
+  
+  .program-day-icon {
+    transform: rotate(45deg);
+  }
+}
+
 // FAQ Section
 .faq-section {
   margin: 1rem 0 4rem 0; // Less top margin, keep bottom margin
   max-width: 800px;
+}
+
+// CTA Section
+.cta-section {
+  text-align: center;
+  margin: 4rem 0;
+  max-width: 800px;
+}
+
+.escape-bali-button {
+  display: inline-block;
+  background: transparent;
+  color: #3d3d3d;
+  text-decoration: none;
+  padding: 1.5rem 3rem;
+  border: 2px solid #3d3d3d;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: #3d3d3d;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 // Add more spacing above FAQ section
@@ -641,8 +745,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
   .logo-text {
     color: white !important;
     font-size: 1.8rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
     letter-spacing: 0.2em;
     margin: 0;
   }
@@ -700,16 +803,15 @@ iframe[src*="intergram.xyz"] .chat-messages {
   margin-bottom: 2rem;
 
   .retreat-info {
-    background: rgba(0, 0, 0, 0.6);
+    background: transparent;
     padding: 2rem;
     border-radius: 15px;
-    backdrop-filter: blur(10px);
 
     h3 {
       color: white !important;
       font-size: 1.8rem;
+      font-weight: 300;
       margin-bottom: 0.5rem;
-      font-weight: 600;
     }
 
     .retreat-location {
@@ -739,7 +841,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
     .buy-retreat-button {
       display: inline-block;
-      background: $accent-brown;
+      background: rgba(0, 0, 0, 0.5);
       color: white;
       padding: 1rem 2.5rem;
       text-decoration: none;
@@ -750,7 +852,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
       &:hover {
-        background: $accent-brown-hover;
+        background: rgba(0, 0, 0, 0.7);
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
       }
@@ -769,7 +871,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
 .hero-scrollable {
   display: flex;
   flex-direction: column;
-  height: 200vh; // Two full screens
+  height: 300vh; // Three full screens
   padding: 0.125rem;
 }
 
@@ -1199,6 +1301,16 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
 
   // CTA section mobile
+  .cta-section {
+    margin: 3rem 0;
+  }
+  
+  .escape-bali-button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    border: 2px solid #3d3d3d;
+  }
+  
   // FAQ mobile styles
   .faq-section {
     margin: 3rem 0;
@@ -1321,7 +1433,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
   .hero-scrollable {
     flex-direction: column;
-    height: 200vh; // Two full screens on mobile too
+    height: 300vh; // Three full screens on mobile too
   }
 
   .hero-image-row {
