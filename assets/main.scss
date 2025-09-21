@@ -763,14 +763,14 @@ iframe[src*="intergram.xyz"] .chat-messages {
 .hero-scrollable {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 200vh; // Two full screens
   padding: 0.125rem;
 }
 
 .hero-image-row {
   display: flex;
   flex-direction: row;
-  height: 50vh;
+  height: 100vh; // Each row is full screen height
   gap: 0.25rem;
   padding: 0.125rem;
 }
@@ -1292,12 +1292,13 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
   .hero-scrollable {
     flex-direction: column;
-    height: auto;
+    height: 200vh; // Two full screens on mobile too
   }
 
   .hero-image-row {
     flex-direction: column;
-    height: auto;
+    height: 100vh; // Each row is full screen height on mobile
+    min-height: 500px;
   }
 
   .hero-image-section {
