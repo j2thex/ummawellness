@@ -345,8 +345,14 @@ ul {
 
 // FAQ Section
 .faq-section {
-  margin: 4rem 0;
+  margin: 1rem 0 4rem 0; // Less top margin, keep bottom margin
   max-width: 800px;
+}
+
+// Add more spacing above FAQ section
+.included-section + h2 {
+  margin-top: 4rem; // More space from included cards
+  margin-bottom: 1rem; // Less space to first FAQ item
 }
 
 // Intergram Chat Widget Styles

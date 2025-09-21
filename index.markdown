@@ -91,6 +91,7 @@ hero_right_text_4: "Nourish your body with wholesome, organic meals and learn ab
   </div>
 </div>
 
+## FAQ
 
 <div class="faq-section">
   <div class="faq-item">
@@ -130,6 +131,17 @@ hero_right_text_4: "Nourish your body with wholesome, organic meals and learn ab
     </div>
     <div class="faq-answer">
       <p>Yes, absolutely. This retreat is ideal for solo travelers - you’ll find a welcoming community, opportunities for meaningful connections, and plenty of space for personal reflection.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>DO YOU HAVE A LOYALTY PROGRAM?</h3>
+      <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>Bring a friend and you both receive 10% off your retreat booking. Wellness is even more powerful when shared - this program is our way of thanking you for inviting someone special into the journey. Together, you’ll create deeper connection, shared memories, and a more meaningful experience.
+
+</p>
     </div>
   </div>
 
