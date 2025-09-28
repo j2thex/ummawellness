@@ -170,6 +170,51 @@ hero_right_text_4: "Nourish your body with wholesome, organic meals and learn ab
   </div>
 </div>
 
+<div class="pricing-section">
+  <div class="pricing-cards">
+    <!-- Pricing Card -->
+    <div class="pricing-card flip-card" onclick="flipCard(this)">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="flip-icon flip-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="pricing-overlay">
+            <h2>PRICING</h2>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="flip-icon flip-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="flip-content">
+            <div class="pricing-content">
+              <div class="pricing-header">
+                <div class="early-bird-price">EARLY BIRD €3,200</div>
+                <div class="standard-price">STANDARD PRICE €3,600</div>
+              </div>
+              <div class="pricing-details">
+                <p>To secure your place, a deposit of €1000 is required at the time of booking.</p>
+                <p>If you book before 15 November, you receive the early bird price - the remaining balance is €2200, payable by 15 November.</p>
+                <p>After 15 November, the balance increases to €2600 (full retreat price) and has to be paid by 15 January.</p>
+              </div>
+              <div class="cancellation-policy">
+                <h4>Cancellation Policy</h4>
+                <p>Cancellations are non-refundable.</p>
+                <p>In case of cancellation, you may transfer your spot to another participant (subject to approval).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## FAQ
 
 <div class="faq-section">
@@ -258,5 +303,6 @@ In case of cancellation, you may transfer your spot to another participant (subj
     </div>
   </div>
 </div>
+
 
 

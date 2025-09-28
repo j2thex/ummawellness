@@ -284,6 +284,17 @@
                     includedCards.classList.remove('expanded');
                 }
             }
+            
+            // Handle pricing cards height expansion
+            const pricingCards = document.querySelector('.pricing-cards');
+            if (pricingCards && card.closest('.pricing-cards')) {
+                const hasFlippedCard = pricingCards.querySelector('.flip-card.flipped');
+                if (hasFlippedCard) {
+                    pricingCards.classList.add('expanded');
+                } else {
+                    pricingCards.classList.remove('expanded');
+                }
+            }
         }
     </script>
 </body>

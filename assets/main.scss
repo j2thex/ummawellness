@@ -428,23 +428,22 @@ ul {
   max-width: 800px;
 }
 
-.escape-bali-button {
+.buy-retreat-cta-button {
   display: inline-block;
-  background: transparent;
-  color: #3d3d3d;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   text-decoration: none;
   padding: 1.5rem 3rem;
-  border: 2px solid #3d3d3d;
-  border-radius: 50px;
+  border-radius: 25px;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   
   &:hover {
-    background: #3d3d3d;
-    color: white;
+    background: rgba(0, 0, 0, 0.7);
     transform: translateY(-2px);
   }
   
@@ -991,6 +990,15 @@ iframe[src*="intergram.xyz"] .chat-messages {
   color: #3d3d3d;
 }
 
+// Pricing cards flip icons
+.pricing-card .flip-arrow svg {
+  color: #3d3d3d;
+}
+
+.pricing-card .flip-close svg {
+  color: #3d3d3d;
+}
+
 // Flip card back styling
 .flip-card-back {
   position: relative;
@@ -998,6 +1006,17 @@ iframe[src*="intergram.xyz"] .chat-messages {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
+  // Remove shadow effects for pricing cards and included cards
+  .pricing-card &,
+  .included-card & {
+    background: white !important;
+    
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
   
   &::before {
     content: '';
@@ -1305,10 +1324,9 @@ iframe[src*="intergram.xyz"] .chat-messages {
     margin: 3rem 0;
   }
   
-  .escape-bali-button {
+  .buy-retreat-cta-button {
     padding: 1.2rem 2.5rem;
     font-size: 1.1rem;
-    border: 2px solid #3d3d3d;
   }
   
   // FAQ mobile styles
@@ -1681,6 +1699,173 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
 }
 
+// Pricing Section Styles
+.pricing-section {
+  margin: 1rem 0 4rem 0;
+  max-width: 800px;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 0.25rem;
+  height: 10vh; // 1/10 of hero section height
+  min-height: 80px;
+  padding: 0.125rem;
+  transition: height 0.3s ease;
+  
+  // Increase height when any card is flipped
+  &.expanded {
+    height: 50vh; // Much larger height when flipped
+    min-height: 400px;
+  }
+}
+
+.pricing-card {
+  flex: 1;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  perspective: 1000px;
+  border: 1px solid #e9ecef;
+}
+
+.pricing-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  text-align: left;
+  color: #3d3d3d;
+  padding: 1rem;
+  
+  h2 {
+    color: #3d3d3d !important;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 400;
+    font-stretch: condensed;
+  }
+}
+
+  .pricing-content {
+    color: #3d3d3d !important;
+    text-align: left;
+    max-width: 90%;
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+    
+    .pricing-header {
+      margin-bottom: 1.5rem;
+      
+      .early-bird-price {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $accent-brown !important;
+        margin-bottom: 0.5rem;
+      }
+      
+      .standard-price {
+        font-size: 1.4rem;
+        color: #666 !important;
+        text-decoration: line-through;
+      }
+    }
+    
+    .pricing-details {
+      margin-bottom: 1.5rem;
+      
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        color: #3d3d3d !important;
+      }
+    }
+    
+    .cancellation-policy {
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $accent-brown !important;
+        margin-bottom: 0.8rem;
+      }
+      
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+        color: #3d3d3d !important;
+      }
+    }
+  }
+
+// Mobile styles for pricing section
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    height: 20vh; // Slightly taller on mobile for better usability
+    min-height: 120px;
+    gap: 0.25rem;
+    
+    &.expanded {
+      height: 60vh; // Much taller on mobile when flipped
+      min-height: 500px;
+    }
+  }
+  
+  .pricing-card {
+    height: 50%;
+  }
+  
+  .pricing-overlay {
+    padding: 0.8rem;
+    
+    h2 {
+      font-size: 1rem;
+    }
+  }
+  
+  .pricing-content {
+    padding: 0.8rem;
+    
+    .pricing-header {
+      .early-bird-price {
+        font-size: 1.5rem;
+        color: $accent-brown !important;
+      }
+      
+      .standard-price {
+        font-size: 1.2rem;
+        color: #666 !important;
+      }
+    }
+    
+    .pricing-details p {
+      font-size: 1rem;
+      color: #3d3d3d !important;
+    }
+    
+    .cancellation-policy {
+      h4 {
+        font-size: 1.1rem;
+        color: $accent-brown !important;
+      }
+      
+      p {
+        font-size: 0.9rem;
+        color: #3d3d3d !important;
+      }
+    }
+  }
+}
+
 // Flip Card Styles
 .flip-card {
   cursor: pointer;
@@ -1749,7 +1934,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
     }
     
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
       color: white;
@@ -1762,10 +1947,53 @@ iframe[src*="intergram.xyz"] .chat-messages {
       
       li {
         padding: 0.3rem 0;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: 1.4;
         color: white;
         padding-left: 0;
+      }
+    }
+  }
+  
+  // Override for pricing cards - dark text on white background
+  .pricing-card .flip-content {
+    color: #3d3d3d !important;
+    text-align: left;
+    
+    h3 {
+      color: #3d3d3d !important;
+    }
+    
+    p {
+      color: #3d3d3d !important;
+    }
+    
+    ul li {
+      color: #3d3d3d !important;
+    }
+  }
+  
+  // Override for included cards - dark text on white background with larger fonts
+  .included-card .flip-content {
+    color: #3d3d3d !important;
+    text-align: left;
+    
+    h3 {
+      color: #3d3d3d !important;
+      font-size: 1.4rem;
+    }
+    
+    p {
+      color: #3d3d3d !important;
+      font-size: 1.1rem;
+    }
+    
+    ul {
+      li {
+        color: #3d3d3d !important;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0.5rem 0;
       }
     }
   }
@@ -1776,11 +2004,11 @@ iframe[src*="intergram.xyz"] .chat-messages {
       padding: 0.8rem;
       
       ul li {
-        font-size: 0.75rem;
-        padding: 0.2rem 0;
-        line-height: 1.3;
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+        line-height: 1.4;
         padding-left: 0;
-        color: white;
+        color: #3d3d3d !important;
       }
     }
   }
