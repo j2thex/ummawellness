@@ -1456,14 +1456,19 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
   .hero-image-row {
     flex-direction: column;
-    height: 100vh; // Each row is full screen height on mobile
-    min-height: 500px;
+    height: 200vh; // Two full screen heights plus gap
+    min-height: 1200px;
+    gap: 0.25rem;
+    padding: 0.125rem;
   }
 
   .hero-image-section {
     width: 100%;
-    height: 100vh;
-    min-height: 500px;
+    height: 100vh; // Full screen height for vertical photos
+    min-height: 600px; // Ensure minimum height for vertical proportions
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .hero-image-overlay {
@@ -1681,8 +1686,8 @@ iframe[src*="intergram.xyz"] .chat-messages {
     gap: 0.25rem;
     
     &.expanded {
-      height: 60vh; // Much taller on mobile when flipped
-      min-height: 500px;
+      height: 80vh; // Much taller on mobile when flipped for better text visibility
+      min-height: 600px;
     }
   }
   
@@ -1834,6 +1839,8 @@ iframe[src*="intergram.xyz"] .chat-messages {
   
   .pricing-content {
     padding: 0.8rem;
+    max-height: none; // Remove height restrictions on mobile
+    overflow: visible; // Allow content to flow naturally
     
     .pricing-header {
       .early-bird-price {
@@ -2022,6 +2029,8 @@ iframe[src*="intergram.xyz"] .chat-messages {
   &.included-card {
     .flip-content {
       padding: 0.8rem;
+      max-height: none; // Remove height restrictions on mobile
+      overflow: visible; // Allow content to flow naturally
       
       ul li {
         font-size: 0.9rem;
