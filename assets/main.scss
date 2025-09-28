@@ -1695,8 +1695,8 @@ iframe[src*="intergram.xyz"] .chat-messages {
     
     // When flipped, individual card expands
     &.flipped {
-      height: 100vh;
-      min-height: 600px;
+      height: 120vh; // Extra height to ensure no cutoff
+      min-height: 800px;
     }
   }
   
@@ -1834,8 +1834,8 @@ iframe[src*="intergram.xyz"] .chat-messages {
     
     // When flipped, individual card expands
     &.flipped {
-      height: 100vh;
-      min-height: 600px;
+      height: 120vh; // Extra height to ensure no cutoff
+      min-height: 800px;
     }
   }
   
@@ -2010,6 +2010,27 @@ iframe[src*="intergram.xyz"] .chat-messages {
     }
   }
   
+  // Mobile styles for pricing card content
+  &.pricing-card {
+    .flip-content {
+      padding: 1.5rem;
+      max-height: none;
+      overflow: visible;
+      height: 100%;
+      
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+      }
+      
+      h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+  
   // Override for included cards - dark text on white background with larger fonts
   .included-card .flip-content {
     color: #3d3d3d !important;
@@ -2038,14 +2059,15 @@ iframe[src*="intergram.xyz"] .chat-messages {
   // Specific styles for included cards
   &.included-card {
     .flip-content {
-      padding: 0.8rem;
+      padding: 1.5rem;
       max-height: none; // Remove height restrictions on mobile
       overflow: visible; // Allow content to flow naturally
+      height: 100%;
       
       ul li {
-        font-size: 0.9rem;
-        padding: 0.4rem 0;
-        line-height: 1.4;
+        font-size: 1rem;
+        padding: 0.6rem 0;
+        line-height: 1.5;
         padding-left: 0;
         color: #3d3d3d !important;
       }
