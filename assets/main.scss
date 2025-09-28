@@ -1681,18 +1681,23 @@ iframe[src*="intergram.xyz"] .chat-messages {
 @media (max-width: 768px) {
   .included-cards {
     flex-direction: column;
-    height: 20vh; // Slightly taller on mobile for better usability
+    height: auto; // Let cards determine their own height on mobile
     min-height: 120px;
     gap: 0.25rem;
     
-    &.expanded {
-      height: 80vh; // Much taller on mobile when flipped for better text visibility
-      min-height: 600px;
-    }
+    // Remove the expanded class behavior on mobile
+    // Cards will expand individually
   }
   
   .included-card {
-    height: 50%;
+    height: 20vh; // Each card has its own height
+    min-height: 120px;
+    
+    // When flipped, individual card expands
+    &.flipped {
+      height: 100vh;
+      min-height: 600px;
+    }
   }
   
   .included-overlay {
@@ -1815,18 +1820,23 @@ iframe[src*="intergram.xyz"] .chat-messages {
 @media (max-width: 768px) {
   .pricing-cards {
     flex-direction: column;
-    height: 20vh; // Slightly taller on mobile for better usability
+    height: auto; // Let cards determine their own height on mobile
     min-height: 120px;
     gap: 0.25rem;
     
-    &.expanded {
-      height: 80vh; // Much taller on mobile when flipped for pricing content
-      min-height: 700px;
-    }
+    // Remove the expanded class behavior on mobile
+    // Cards will expand individually
   }
   
   .pricing-card {
-    height: 50%;
+    height: 20vh; // Each card has its own height
+    min-height: 120px;
+    
+    // When flipped, individual card expands
+    &.flipped {
+      height: 100vh;
+      min-height: 600px;
+    }
   }
   
   .pricing-overlay {
