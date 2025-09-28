@@ -1715,8 +1715,8 @@ iframe[src*="intergram.xyz"] .chat-messages {
   
   // Increase height when any card is flipped
   &.expanded {
-    height: 50vh; // Much larger height when flipped
-    min-height: 400px;
+    height: 70vh; // Much larger height when flipped for pricing content
+    min-height: 600px;
   }
 }
 
@@ -1746,9 +1746,9 @@ iframe[src*="intergram.xyz"] .chat-messages {
   
   h2 {
     color: #3d3d3d !important;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0;
-    font-weight: 400;
+    font-weight: 600;
     font-stretch: condensed;
   }
 }
@@ -1757,7 +1757,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
     color: #3d3d3d !important;
     text-align: left;
     max-width: 90%;
-    padding: 1rem;
+    padding: 1.5rem;
     position: relative;
     z-index: 10;
     
@@ -1815,8 +1815,8 @@ iframe[src*="intergram.xyz"] .chat-messages {
     gap: 0.25rem;
     
     &.expanded {
-      height: 60vh; // Much taller on mobile when flipped
-      min-height: 500px;
+      height: 80vh; // Much taller on mobile when flipped for pricing content
+      min-height: 700px;
     }
   }
   
@@ -1828,7 +1828,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
     padding: 0.8rem;
     
     h2 {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
   
@@ -1917,6 +1917,26 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
   
   &.flipped .flip-arrow {
+    display: none !important;
+  }
+  
+  // Hide all front side elements when flipped (Safari fix)
+  &.flipped .flip-card-front {
+    display: none !important;
+  }
+  
+  // Ensure back side is visible when flipped
+  &.flipped .flip-card-back {
+    display: flex !important;
+  }
+  
+  // Hide specific front side elements for included cards
+  &.flipped .included-overlay {
+    display: none !important;
+  }
+  
+  // Hide specific front side elements for pricing cards
+  &.flipped .pricing-overlay {
     display: none !important;
   }
   
