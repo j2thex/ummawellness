@@ -14,6 +14,12 @@ gallery_images:
   - "/assets/images/swiss-spa.jpg"
   - "/assets/images/swiss-snow.jpg"
 available_spots: 6
+checkout:
+  full_payment_link: ""
+  deposit_link: ""
+  currency_symbol: "€"
+  full_amount: 3200
+  deposit_amount: 600
 ---
 
 # Swiss Alps Wellness Retreat

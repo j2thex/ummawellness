@@ -14,6 +14,12 @@ gallery_images:
   - "/assets/images/bali-meditation.jpg"
   - "/assets/images/bali-sunset.jpg"
 available_spots: 8
+checkout:
+  full_payment_link: ""
+  deposit_link: ""
+  currency_symbol: "€"
+  full_amount: 2800
+  deposit_amount: 500
 ---
 
 # Bali Wellness Retreat

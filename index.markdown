@@ -16,6 +16,12 @@ hero_right_title_3: "Nature & Adventure"
 hero_right_text_3: "Connect with nature through guided hikes and outdoor activities in breathtaking landscapes."
 hero_right_title_4: "Wellness & Nutrition"
 hero_right_text_4: "Nourish your body with wholesome, organic meals and learn about holistic nutrition."
+checkout:
+  full_payment_link: "https://book.stripe.com/9B63co2yt2gubpleADeQM01"
+  deposit_link: "https://book.stripe.com/5kQ00cflf1cqeBx647eQM00"
+  currency_symbol: "€"
+  full_amount: 3200
+  deposit_amount: 1000
 ---
 
 
@@ -214,6 +220,8 @@ hero_right_text_4: "Nourish your body with wholesome, organic meals and learn ab
     </div>
   </div>
 </div>
+
+{% include checkout.html %}
 
 ## FAQ
 

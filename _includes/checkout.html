@@ -1,0 +1,42 @@
+<div id="pay" class="checkout-section">
+  <h2>Secure Your Spot</h2>
+  <p class="checkout-subtitle">Choose to pay the full amount now or reserve your place with a deposit.</p>
+
+  {% assign checkout = page.checkout %}
+  {% if checkout and (checkout.full_payment_link or checkout.deposit_link) %}
+  <div class="checkout-options">
+    {% if checkout.full_payment_link %}
+    <a class="checkout-button checkout-full" href="{{ checkout.full_payment_link }}" target="_blank" rel="noopener noreferrer">
+      {% if checkout.currency_symbol and checkout.full_amount %}
+      Pay Full {{ checkout.currency_symbol }}{{ checkout.full_amount }}
+      {% else %}
+      Pay Full Amount
+      {% endif %}
+    </a>
+    {% endif %}
+
+    {% if checkout.deposit_link %}
+    <a class="checkout-button checkout-deposit" href="{{ checkout.deposit_link }}" target="_blank" rel="noopener noreferrer">
+      {% if checkout.currency_symbol and checkout.deposit_amount %}
+      Pay Deposit {{ checkout.currency_symbol }}{{ checkout.deposit_amount }}
+      {% else %}
+      Pay Deposit
+      {% endif %}
+    </a>
+    {% endif %}
+  </div>
+  {% else %}
+  <!-- Checkout links not configured. Add to page front matter:
+  checkout:
+    full_payment_link: "https://buy.stripe.com/..."
+    deposit_link: "https://buy.stripe.com/..."
+    currency_symbol: "€"
+    full_amount: 2800
+    deposit_amount: 500
+  -->
+  {% endif %}
+
+  <p class="checkout-note">Payments are processed securely via Stripe. You’ll receive a confirmation email after checkout.</p>
+</div>
+
+

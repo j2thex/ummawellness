@@ -421,6 +421,77 @@ ul {
   max-width: 800px;
 }
 
+// Checkout Section
+.checkout-section {
+  margin: 2rem 0 3rem 0;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .checkout-subtitle {
+    color: $text-muted !important;
+    margin-bottom: 1.25rem;
+  }
+
+  .checkout-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+    justify-content: center;
+  }
+
+  .checkout-button {
+    display: inline-block;
+    padding: 0.8rem 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    min-width: 240px;
+    text-align: center;
+  }
+
+  .checkout-full {
+    background: $accent-brown;
+    color: white;
+    &:hover { background: $accent-brown-hover; }
+  }
+
+  .checkout-deposit {
+    background: #f8f6f2;
+    color: #3d3d3d;
+    border-color: #e9ecef;
+    &:hover { background: #f1eee8; }
+  }
+
+  .checkout-note {
+    font-size: 0.95rem;
+    color: #666 !important;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-section {
+    .checkout-options {
+      flex-direction: column;
+    }
+    .checkout-button {
+      width: 100%;
+    }
+  }
+}
+
 // CTA Section
 .cta-section {
   text-align: center;

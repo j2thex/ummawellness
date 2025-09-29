@@ -31,6 +31,9 @@
                 {{ content }}
             </div>
             
+            {% comment %} Stripe checkout section placed below pricing content, above FAQ and gallery {% endcomment %}
+            {% include checkout.html %}
+            
             {% if page.gallery_images %}
             <div class="gallery">
                 {% for image in page.gallery_images %}
