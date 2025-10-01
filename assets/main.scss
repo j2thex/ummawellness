@@ -2247,33 +2247,33 @@ iframe[src*="intergram.xyz"] .chat-messages {
   @media (max-width: 768px) {
     .flip-content {
       h3 {
-        font-size: 0.75rem !important;
+        font-size: calc(#{$font-size-3xl} * 0.75) !important;
       }
       
       p {
-        font-size: 0.75rem !important;
+        font-size: calc(#{$font-size-3xl} * 0.75) !important;
       }
     }
     
     // More specific targeting for flip-card-back content
     .flip-card-back .flip-content {
       h3 {
-        font-size: 0.75rem !important;
+        font-size: calc(#{$font-size-3xl} * 0.75) !important;
       }
       
       p {
-        font-size: 0.75rem !important;
+        font-size: calc(#{$font-size-3xl} * 0.75) !important;
       }
     }
     
     // Even more specific for hero sections
     .hero-image-section .flip-card-back .flip-content {
       h3 {
-        font-size: 0.75rem !important;
+        font-size: calc(#{$font-size-3xl} * 0.75) !important;
       }
       
       p {
-        font-size: 0.75rem !important;
+        font-size: calc(#{$font-size-3xl} * 0.75) !important;
       }
     }
     
@@ -2386,13 +2386,3 @@ iframe[src*="intergram.xyz"] .chat-messages {
   
 }
 
-// Force mobile hero flip content to be smaller - added at end for highest priority
-@media (max-width: 768px) {
-  .flip-card .flip-content p {
-    font-size: 0.75rem !important;
-  }
-  
-  .flip-card .flip-content h3 {
-    font-size: 0.75rem !important;
-  }
-}
