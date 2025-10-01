@@ -34,15 +34,15 @@ hero_right_title_6: "NUTRITION"
 # Hero Right Side Content (Back of Cards)
 hero_right_content_1: "Join our carefully curated journey of gentle awakening. Reconnect with life through yoga, somatic practices, mindful movement and restorative stillness. A supportive space to awaken your inner creativity, nurture self-love and return to your true sense of purpose."
 
-hero_right_content_2: "Each day we gather for yoga - gentle, grounding practices designed to support both body and mind. Through breath, movement and presence, we create space to soften, release and return to ourselves. All levels are welcome - whether you are new to yoga or have practiced for years. These sessions are an invitation to reconnect with your body, cultivate balance, and rediscover a sense of inner calm."
+hero_right_content_2: "Each day we gather for yoga - gentle, grounding practices designed to support both body and mind. Through breath, movement and presence, we create space to soften, release and return to ourselves. These sessions are an invitation to reconnect with your body, cultivate balance, and rediscover a sense of inner calm."
 
-hero_right_content_3: "Your retreat unfolds in two distinct sanctuaries. The first three nights are spent in a serene resort in Ubud, embraced by jungle landscapes and the calming rhythm of nature. The journey then continues with three nights in a private villa on the cliffs of Uluwatu, where the vast ocean horizon invites deep rest and reflection. Accommodation will be in shared double rooms, offering comfort and connection throughout the journey."
+hero_right_content_3: "Your retreat unfolds in two distinct sanctuaries. The first three nights are spent in a serene resort in Ubud, embraced by jungle landscapes and the calming rhythm of nature. The journey then continues with three nights in a private villa on the cliffs of Uluwatu, where the vast ocean horizon invites deep rest and reflection."
 
-hero_right_content_4: "Throughout the retreat you will be guided through a variety of practices — from meditation and sound healing to therapeutic group work. Each session is designed to support emotional wellbeing, release tension and invite deeper clarity. These circles become moments of stillness and connection, offering a safe and nurturing space for restoration, inner balance and renewal."
+hero_right_content_4: "You will be guided through a variety of practices — from meditation and sound healing to therapeutic group work. Each session is designed to support emotional wellbeing, release tension and invite deeper clarity. "
 
 hero_right_content_5: "As part of your retreat, you will spend two days in a breathtaking cliff-top sanctuary, immersing in spa rituals, thermal waters and ocean views that invite profound rest and renewal. Surrounded by the wild beauty of Bali's nature, these moments become a gentle reset for body, mind and spirit."
 
-hero_right_content_6: "Wholesome, healthy meals are at the heart of this journey - helping you feel lighter, clearer and more alive. Twice a day, nourishing meals will be served - crafted with care by our private chef and complemented by group dinners in Bali's vibrant restaurants. A third meal is left open for your own rhythm, offering space for solitude, exploration or simply listening to your body's needs."
+hero_right_content_6: "Wholesome, healthy meals are at the heart of this journey. Twice a day, nourishing meals will be served - crafted with care by our private chef and complemented by group dinners in Bali's vibrant restaurants. A third meal is left open for your own rhythm, offering space for solitude, exploration or simply listening to your body's needs."
 
 # Included Items
 included_items:
