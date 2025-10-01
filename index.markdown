@@ -44,6 +44,42 @@ hero_right_content_5: "As part of your retreat, you will spend two days in a bre
 
 hero_right_content_6: "Wholesome, healthy meals are at the heart of this journey - helping you feel lighter, clearer and more alive. Twice a day, nourishing meals will be served - crafted with care by our private chef and complemented by group dinners in Bali's vibrant restaurants. A third meal is left open for your own rhythm, offering space for solitude, exploration or simply listening to your body's needs."
 
+# Included Items
+included_items:
+  - "7 days / 6 nights accommodation"
+  - "Daily yoga practices"
+  - "Sound healing, therapeutic and meditation sessions"
+  - "Sacred waterfall experience & purification ritual"
+  - "Spa days in a cliff-top wellness sanctuary"
+  - "Jamu workshop"
+  - "Two nourishing meals per day"
+  - "Airport transfers"
+  - "Concierge support"
+  - "Wellness gift set"
+
+not_included_items:
+  - "International flights to/from Bali"
+  - "Travel & health insurance"
+  - "Visa fees (if applicable)"
+  - "Personal expenses & additional activities outside the program"
+
+# Program Days
+program_days:
+  - day: "DAY 1. UBUD - ARRIVAL & WELCOME"
+    content: "You will be warmly greeted upon arrival at Denpasar airport with a private transfer to our serene resort in Ubud. If you arrive a couple of days earlier, pickup can be arranged from any location on the island. After settling in and taking time to rest, the group will gather in the evening for a welcome dinner in one of Ubud's top restaurants - the perfect moment to meet, connect, and begin the journey together."
+  - day: "DAY 2. UBUD - FLOW & RENEWAL"
+    content: "The day begins with a nourishing breakfast at the resort, followed by a morning yoga practice and a therapeutic group session to support reflection and inner balance. Afterward, we enjoy a wholesome lunch at a restaurant overlooking Bali's iconic rice terraces, and then continue to one of the island's most beautiful waterfalls - a place to reconnect with nature's flow and feel deeply refreshed.\n\nThe evening is left free: you may choose to be dropped off in central Ubud to wander and dine at your own pace, or return to the resort to rest and enjoy dinner nearby."
+  - day: "DAY 3. UBUD - RITUALS & RENEWAL"
+    content: "The morning begins with a wholesome breakfast, followed by a yoga session combined with sound healing and a group therapy session - a practice to open the body, calm the mind, and awaken inner clarity. Afterward, we travel to a sacred site for a traditional purification ritual, releasing what no longer serves and inviting renewal. A nourishing lunch in a beautiful restaurant awaits nearby, offering time to integrate the experience.\n\nAfter the lunch, you'll join a Jamu workshop, learning to prepare Bali's traditional herbal tonic made from roots and spices. The evening is free, allowing space for solitude, reflection, or exploring at your own rhythm."
+  - day: "DAY 4. ULUWATU - TRANSITION TO THE OCEAN"
+    content: "After breakfast we gather and journey from the jungles of Ubud to the cliffs of Uluwatu. Upon arrival, we settle into a private villa and enjoy a nourishing lunch prepared by our chef. In the afternoon, a restorative sound healing session invites relaxation and renewal.\n\nThe rest of the day is free: you may unwind at the villa, watch the sunset on one of Uluwatu's iconic beaches, enjoy dinner at one of the best restaurants, or book a massage at a trusted local spa we'll be happy to recommend."
+  - day: "DAY 5. ULUWATU - SPA SANCTUARY & DEEP RESTORATION"
+    content: "The day begins with a nourishing breakfast prepared by our private chef at the villa. We then head to one of Bali's most renowned wellness sanctuaries, set on the cliffs with breathtaking ocean views. Here, you'll enjoy a guided yoga session followed by a full morning to immerse yourself in the space: infinity pool overlooking the sea, sauna and steam rooms, hot and cold plunge pools, meditation areas, and tranquil lounges designed for deep relaxation. For those who wish, additional experiences such as a cryotherapy chamber and other advanced wellness treatments can be booked separately.\n\nAfter a restorative lunch at the sanctuary's restaurant, the rest of the day is yours - a free evening to relax, watch the sunset, or enjoy dinner at your own pace."
+  - day: "DAY 6. ULUWATU - RENEWAL & CLOSING CEREMONY"
+    content: "After the breakfast, we return to the spa sanctuary for a second day of restoration, knowing how deeply our guests will have connected with its healing atmosphere. The morning offers yoga and time to once again enjoy its facilities. After the spa, the afternoon is free to rest or spend time in stillness.\n\nAs the sun begins to set, we gather for a traditional Balinese ceremony at Uluwatu Temple, honoring the spirit of the island and the journey we've shared. The day closes with a farewell dinner by the ocean, celebrating connection, gratitude, and the soft integration of all that has unfolded."
+  - day: "DAY 7. ULUWATU - INTEGRATION & DEPARTURE"
+    content: "Our final morning begins with a breakfast, followed by a closing therapeutic circle and meditation - a gentle space to integrate the journey, reflect, and carry its energy forward. After gathering and preparing for departure, private transfers will take you to the airport or to any other destination on the island."
+
 # Checkout Configuration
 checkout:
   full_payment_link: "https://book.stripe.com/9B63co2yt2gubpleADeQM01"
@@ -54,156 +90,9 @@ checkout:
 ---
 
 
-<div class="included-section">
-  <div class="included-cards">
-    <!-- What's Included Card -->
-    <div class="included-card flip-card" onclick="flipCard(this)">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <div class="flip-icon flip-arrow">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="included-overlay">
-            <h3>WHAT'S INCLUDED</h3>
-          </div>
-        </div>
-        <div class="flip-card-back">
-          <div class="flip-icon flip-close">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="flip-content">
-            <ul>
-              <li>7 days / 6 nights accommodation</li>
-              <li>Daily yoga practices</li>
-              <li>Sound healing, therapeutic and meditation sessions</li>
-              <li>Sacred waterfall experience & purification ritual</li>
-              <li>Spa days in a cliff-top wellness sanctuary</li>
-              <li>Jamu workshop</li>
-              <li>Two nourishing meals per day</li>
-              <li>Airport transfers</li>
-              <li>Concierge support</li>
-              <li>Wellness gift set</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- What's Not Included Card -->
-    <div class="included-card flip-card" onclick="flipCard(this)">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <div class="flip-icon flip-arrow">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="included-overlay">
-            <h3>WHAT'S NOT INCLUDED</h3>
-          </div>
-        </div>
-        <div class="flip-card-back">
-          <div class="flip-icon flip-close">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="flip-content">
-            <ul>
-              <li>International flights to/from Bali</li>
-              <li>Travel & health insurance</li>
-              <li>Visa fees (if applicable)</li>
-              <li>Personal expenses & additional activities outside the program</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+{% include included.html %}
 
-## PROGRAM
-
-<div class="program-section">
-  <div class="program-day-item">
-    <div class="program-day-question">
-      <h3>DAY 1. UBUD - ARRIVAL & WELCOME</h3>
-      <span class="program-day-icon">+</span>
-    </div>
-    <div class="program-day-answer">
-      <p>You will be warmly greeted upon arrival at Denpasar airport with a private transfer to our serene resort in Ubud. If you arrive a couple of days earlier, pickup can be arranged from any location on the island. After settling in and taking time to rest, the group will gather in the evening for a welcome dinner in one of Ubud's top restaurants - the perfect moment to meet, connect, and begin the journey together.</p>
-    </div>
-  </div>
-
-  <div class="program-day-item">
-    <div class="program-day-question">
-      <h3>DAY 2. UBUD - FLOW & RENEWAL</h3>
-      <span class="program-day-icon">+</span>
-    </div>
-    <div class="program-day-answer">
-      <p>The day begins with a nourishing breakfast at the resort, followed by a morning yoga practice and a therapeutic group session to support reflection and inner balance. Afterward, we enjoy a wholesome lunch at a restaurant overlooking Bali's iconic rice terraces, and then continue to one of the island's most beautiful waterfalls - a place to reconnect with nature's flow and feel deeply refreshed.</p>
-      <p>The evening is left free: you may choose to be dropped off in central Ubud to wander and dine at your own pace, or return to the resort to rest and enjoy dinner nearby.</p>
-    </div>
-  </div>
-
-  <div class="program-day-item">
-    <div class="program-day-question">
-      <h3>DAY 3. UBUD - RITUALS & RENEWAL</h3>
-      <span class="program-day-icon">+</span>
-    </div>
-    <div class="program-day-answer">
-      <p>The morning begins with a wholesome breakfast, followed by a yoga session combined with sound healing and a group therapy session - a practice to open the body, calm the mind, and awaken inner clarity. Afterward, we travel to a sacred site for a traditional purification ritual, releasing what no longer serves and inviting renewal. A nourishing lunch in a beautiful restaurant awaits nearby, offering time to integrate the experience.</p>
-      <p>After the lunch, you'll join a Jamu workshop, learning to prepare Bali's traditional herbal tonic made from roots and spices. The evening is free, allowing space for solitude, reflection, or exploring at your own rhythm.</p>
-    </div>
-  </div>
-
-  <div class="program-day-item">
-    <div class="program-day-question">
-      <h3>DAY 4. ULUWATU - TRANSITION TO THE OCEAN</h3>
-      <span class="program-day-icon">+</span>
-    </div>
-    <div class="program-day-answer">
-      <p>After breakfast we gather and journey from the jungles of Ubud to the cliffs of Uluwatu. Upon arrival, we settle into a private villa and enjoy a nourishing lunch prepared by our chef. In the afternoon, a restorative sound healing session invites relaxation and renewal.</p>
-      <p>The rest of the day is free: you may unwind at the villa, watch the sunset on one of Uluwatu's iconic beaches, enjoy dinner at one of the best restaurants, or book a massage at a trusted local spa we'll be happy to recommend.</p>
-    </div>
-  </div>
-
-  <div class="program-day-item">
-    <div class="program-day-question">
-      <h3>DAY 5. ULUWATU - SPA SANCTUARY & DEEP RESTORATION</h3>
-      <span class="program-day-icon">+</span>
-    </div>
-    <div class="program-day-answer">
-      <p>The day begins with a nourishing breakfast prepared by our private chef at the villa. We then head to one of Bali's most renowned wellness sanctuaries, set on the cliffs with breathtaking ocean views. Here, you'll enjoy a guided yoga session followed by a full morning to immerse yourself in the space: infinity pool overlooking the sea, sauna and steam rooms, hot and cold plunge pools, meditation areas, and tranquil lounges designed for deep relaxation. For those who wish, additional experiences such as a cryotherapy chamber and other advanced wellness treatments can be booked separately.</p>
-      <p>After a restorative lunch at the sanctuary's restaurant, the rest of the day is yours - a free evening to relax, watch the sunset, or enjoy dinner at your own pace.</p>
-    </div>
-  </div>
-
-  <div class="program-day-item">
-    <div class="program-day-question">
-      <h3>DAY 6. ULUWATU - RENEWAL & CLOSING CEREMONY</h3>
-      <span class="program-day-icon">+</span>
-    </div>
-    <div class="program-day-answer">
-      <p>After the breakfast, we return to the spa sanctuary for a second day of restoration, knowing how deeply our guests will have connected with its healing atmosphere. The morning offers yoga and time to once again enjoy its facilities. After the spa, the afternoon is free to rest or spend time in stillness.</p>
-      <p>As the sun begins to set, we gather for a traditional Balinese ceremony at Uluwatu Temple, honoring the spirit of the island and the journey we've shared. The day closes with a farewell dinner by the ocean, celebrating connection, gratitude, and the soft integration of all that has unfolded.</p>
-    </div>
-  </div>
-
-  <div class="program-day-item">
-    <div class="program-day-question">
-      <h3>DAY 7. ULUWATU - INTEGRATION & DEPARTURE</h3>
-      <span class="program-day-icon">+</span>
-    </div>
-    <div class="program-day-answer">
-      <p>Our final morning begins with a breakfast, followed by a closing therapeutic circle and meditation - a gentle space to integrate the journey, reflect, and carry its energy forward. After gathering and preparing for departure, private transfers will take you to the airport or to any other destination on the island.</p>
-    </div>
-  </div>
-</div>
+{% include program.html %}
 
 <div class="pricing-section">
   <div class="pricing-cards">

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+## PROGRAM {.program-header}
+
+<div class="program-section">
+  {% for day in page.program_days %}
+    <div class="program-day-item">
+      <div class="program-day-question">
+        <h3>{{ day.day }}</h3>
+        <span class="program-day-icon">+</span>
+      </div>
+      <div class="program-day-answer">
+        {% assign paragraphs = day.content | split: '\n\n' %}
+        {% for paragraph in paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

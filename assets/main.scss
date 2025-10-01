@@ -437,6 +437,31 @@ ul {
 .program-section {
   margin: 1rem 0 4rem 0;
   max-width: 800px;
+  transition: margin-top 0.3s ease;
+}
+
+// Push program section down when included cards are expanded
+body.included-expanded .program-section {
+  margin-top: 80vh;
+}
+
+// Also push down the PROGRAM header
+.program-header {
+  transition: margin-top 0.3s ease;
+}
+
+body.included-expanded .program-header {
+  margin-top: 80vh;
+}
+
+// Alternative approach - target h2 that comes after included section
+body.included-expanded h2 {
+  margin-top: 80vh;
+}
+
+// More specific targeting for program header
+body.included-expanded .included-section + h2 {
+  margin-top: 80vh;
 }
 
 .program-day-item {
@@ -580,6 +605,26 @@ ul {
     .checkout-button {
       width: 100%;
     }
+  }
+
+  // Mobile hero flip content - make text much smaller
+  .hero-image-section .flip-content {
+    h3 {
+      font-size: 0.75rem !important;
+    }
+    
+    p {
+      font-size: 0.75rem !important;
+    }
+  }
+
+  // Override the specific .flip-card .flip-content p selector
+  .flip-card .flip-content p {
+    font-size: 0.75rem !important;
+  }
+
+  .flip-card .flip-content h3 {
+    font-size: 0.75rem !important;
   }
 }
 
@@ -1135,10 +1180,12 @@ iframe[src*="intergram.xyz"] .chat-messages {
 // Included cards flip icons
 .included-card .flip-icon {
   border: 2px solid #e9ecef;
+  top: 50%;
+  transform: translateY(-50%);
 
   &:hover {
     border-color: #3d3d3d;
-    transform: scale(1.1);
+    transform: translateY(-50%) scale(1.1);
   }
 }
 
@@ -1669,6 +1716,39 @@ iframe[src*="intergram.xyz"] .chat-messages {
     }
   }
 
+  // Mobile hero flip content - make text much smaller
+  .hero-image-section .flip-content {
+    h3 {
+      font-size: 0.75rem !important;
+    }
+    
+    p {
+      font-size: 0.75rem !important;
+    }
+  }
+
+  // More specific targeting for hero flip content on mobile
+  .hero-container .hero-image-section .flip-content {
+    h3 {
+      font-size: 0.75rem !important;
+    }
+    
+    p {
+      font-size: 0.75rem !important;
+    }
+  }
+
+  // Even more specific - target the actual flip content
+  .flip-card-back .flip-content {
+    h3 {
+      font-size: 0.75rem !important;
+    }
+    
+    p {
+      font-size: 0.75rem !important;
+    }
+  }
+
   // Retreat layout mobile
   .retreat-container {
     flex-direction: column;
@@ -1807,11 +1887,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
   padding: 0.125rem;
   transition: height 0.3s ease;
   
-  // Increase height when any card is flipped
-  &.expanded {
-    height: 50vh; // Much larger height when flipped
-    min-height: 400px;
-  }
+  // Individual card expansion - removed container expansion
 }
 
 .included-card {
@@ -1827,12 +1903,20 @@ iframe[src*="intergram.xyz"] .chat-messages {
   cursor: pointer;
   perspective: 1000px;
   border: 1px solid #e9ecef;
+  transition: height 0.3s ease;
+  
+  // Individual card expansion
+  &.expanded {
+    height: 80vh;
+    min-height: 600px;
+  }
 }
 
 .included-overlay {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
   z-index: 2;
   text-align: left;
   color: #3d3d3d;
@@ -2157,6 +2241,41 @@ iframe[src*="intergram.xyz"] .chat-messages {
       text-transform: uppercase;
       letter-spacing: 0.2em;
     }
+  }
+
+  // Mobile override for flip-content - must come after the main rule
+  @media (max-width: 768px) {
+    .flip-content {
+      h3 {
+        font-size: 0.75rem !important;
+      }
+      
+      p {
+        font-size: 0.75rem !important;
+      }
+    }
+    
+    // More specific targeting for flip-card-back content
+    .flip-card-back .flip-content {
+      h3 {
+        font-size: 0.75rem !important;
+      }
+      
+      p {
+        font-size: 0.75rem !important;
+      }
+    }
+    
+    // Even more specific for hero sections
+    .hero-image-section .flip-card-back .flip-content {
+      h3 {
+        font-size: 0.75rem !important;
+      }
+      
+      p {
+        font-size: 0.75rem !important;
+      }
+    }
     
     ul {
       list-style: none;
@@ -2217,11 +2336,14 @@ iframe[src*="intergram.xyz"] .chat-messages {
   .included-card .flip-content {
     color: #3d3d3d !important;
     text-align: left;
+    padding: 10rem 3rem 10rem 3rem;
     
     h3 {
       color: #3d3d3d !important;
-      font-size: $font-size-2xl;
-      font-weight: $font-weight-semibold;
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-light;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
     }
     
     p {
@@ -2233,9 +2355,11 @@ iframe[src*="intergram.xyz"] .chat-messages {
     ul {
       li {
         color: #3d3d3d !important;
-        font-size: $font-size-base;
-        font-weight: $font-weight-regular;
-        line-height: $line-height-normal;
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-light;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        line-height: $line-height-tight;
         padding: 0.5rem 0;
       }
     }
@@ -2244,7 +2368,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
   // Specific styles for included cards
   &.included-card {
     .flip-content {
-      padding: 1.5rem;
+      padding: 10rem 3rem 10rem 3rem;
       max-height: none; // Remove height restrictions on mobile
       overflow: visible; // Allow content to flow naturally
       height: 100%;
@@ -2260,4 +2384,15 @@ iframe[src*="intergram.xyz"] .chat-messages {
     }
   }
   
+}
+
+// Force mobile hero flip content to be smaller - added at end for highest priority
+@media (max-width: 768px) {
+  .flip-card .flip-content p {
+    font-size: 0.75rem !important;
+  }
+  
+  .flip-card .flip-content h3 {
+    font-size: 0.75rem !important;
+  }
 }

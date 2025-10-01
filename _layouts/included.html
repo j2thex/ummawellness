@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="included-section">
+  <div class="included-cards">
+    <!-- What's Included Card -->
+    <div class="included-card flip-card" onclick="flipCard(this)">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="flip-icon flip-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="included-overlay">
+            <h3>WHAT'S INCLUDED</h3>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="flip-icon flip-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="flip-content">
+            {% for item in page.included_items %}
+              <h3>{{ item }}</h3>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- What's Not Included Card -->
+    <div class="included-card flip-card" onclick="flipCard(this)">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="flip-icon flip-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="included-overlay">
+            <h3>WHAT'S NOT INCLUDED</h3>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="flip-icon flip-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="flip-content">
+            {% for item in page.not_included_items %}
+              <h3>{{ item }}</h3>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

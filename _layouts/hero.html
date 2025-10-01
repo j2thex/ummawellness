@@ -276,14 +276,22 @@
             
             // Only apply container expansion on desktop (screen width > 768px)
             if (window.innerWidth > 768) {
-                // Handle included cards height expansion
+                // Handle included cards height expansion - allow multiple cards to be expanded
                 const includedCards = document.querySelector('.included-cards');
                 if (includedCards && card.closest('.included-cards')) {
-                    const hasFlippedCard = includedCards.querySelector('.flip-card.flipped');
-                    if (hasFlippedCard) {
-                        includedCards.classList.add('expanded');
+                    // Toggle expanded class only for the clicked card
+                    if (card.classList.contains('flipped')) {
+                        card.classList.add('expanded');
                     } else {
-                        includedCards.classList.remove('expanded');
+                        card.classList.remove('expanded');
+                    }
+                    
+                    // Check if any card is expanded to manage body class
+                    const hasExpandedCard = includedCards.querySelector('.flip-card.expanded');
+                    if (hasExpandedCard) {
+                        document.body.classList.add('included-expanded');
+                    } else {
+                        document.body.classList.remove('included-expanded');
                     }
                 }
                 
