@@ -829,9 +829,9 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
   p {
     color: $text-muted !important;
-    font-size: $font-size-base;
-    font-weight: $font-weight-regular;
-    line-height: $line-height-relaxed;
+    font-size: calc(#{$font-size-base} * 1.25);
+    font-weight: $font-weight-light;
+    line-height: 1.25;
     margin: 0;
     padding: 1.5rem 0;
   }
@@ -848,7 +848,7 @@ iframe[src*="intergram.xyz"] .chat-messages {
   }
 
   .faq-answer {
-    max-height: 200px;
+    max-height: 400px;
     padding: 0 2rem;
   }
 }
@@ -1179,6 +1179,18 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
 // Included cards flip icons
 .included-card .flip-icon {
+  border: 2px solid #e9ecef;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    border-color: #3d3d3d;
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+// Pricing card flip icons
+.pricing-card .flip-icon {
   border: 2px solid #e9ecef;
   top: 50%;
   transform: translateY(-50%);
@@ -1851,7 +1863,9 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
     p {
       padding: 1rem 0;
-      font-size: 0.95rem;
+      font-size: calc(#{$font-size-base} * 1.25);
+      font-weight: $font-weight-light;
+      line-height: 1.25;
     }
   }
 
@@ -2001,18 +2015,19 @@ iframe[src*="intergram.xyz"] .chat-messages {
 
 .pricing-overlay {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
   z-index: 2;
   text-align: left;
   color: #3d3d3d;
   padding: 1rem;
   
-  h2 {
+  h3 {
     color: #3d3d3d !important;
-    font-size: $font-size-xl;
-    font-weight: $font-weight-semibold;
+    font-size: $font-size-4xl;
     margin: 0;
+    font-weight: $font-weight-regular;
     font-stretch: condensed;
   }
 }

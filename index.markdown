@@ -106,7 +106,7 @@ checkout:
             </svg>
           </div>
           <div class="pricing-overlay">
-            <h2>PRICING</h2>
+            <h3>PRICING</h3>
           </div>
         </div>
         <div class="flip-card-back">
