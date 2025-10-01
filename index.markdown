@@ -1,21 +1,50 @@
 ---
 layout: hero
 title: "Ummawellness Retreats"
+
+# Hero Section Content
 hero_title: "Transform Your Life"
 hero_subtitle: "Discover wellness retreats in the world's most inspiring locations"
 hero_left_image: "/assets/images/bali-hero.jpg"
+
+# Hero Left Side Content
+hero_logo: "UMMAWELLNESS"
+hero_retreat_title: "1 WEEK WELLNESS RETREAT"
+hero_retreat_location: "LOCATION: BALI"
+hero_early_bird_price: "EARLY BIRD PRICE €3,200"
+hero_regular_price: "€3,600"
+hero_buy_button: "BUY RETREAT"
+
+# Hero Right Side Images
 hero_right_image_1: "/assets/images/bali-yoga.jpg"
 hero_right_image_2: "/assets/images/swiss-mountains.jpg"
 hero_right_image_3: "/assets/images/bali-nature.jpg"
 hero_right_image_4: "/assets/images/swiss-spa.jpg"
-hero_right_title_1: "Mindfulness & Meditation"
-hero_right_text_1: "Discover inner peace through guided meditation and mindfulness practices in serene natural settings."
-hero_right_title_2: "Yoga & Movement"
-hero_right_text_2: "Connect with your body through daily yoga sessions and mindful movement practices."
-hero_right_title_3: "Nature & Adventure"
-hero_right_text_3: "Connect with nature through guided hikes and outdoor activities in breathtaking landscapes."
-hero_right_title_4: "Wellness & Nutrition"
-hero_right_text_4: "Nourish your body with wholesome, organic meals and learn about holistic nutrition."
+hero_right_image_5: "/assets/images/spa.png"
+hero_right_image_6: "/assets/images/nutrition.jpg"
+
+# Hero Right Side Titles (Front of Cards)
+hero_right_title_1: "ABOUT"
+hero_right_title_2: "YOGA FOR BODY & MIND"
+hero_right_title_3: "UBUD & ULUWATU: A JOURNEY IN TWO LANDSCAPES"
+hero_right_title_4: "CIRCLES OF HEALING & PRESENCE"
+hero_right_title_5: "SPA SESSIONS"
+hero_right_title_6: "NUTRITION"
+
+# Hero Right Side Content (Back of Cards)
+hero_right_content_1: "Join our carefully curated journey of gentle awakening. Reconnect with life through yoga, somatic practices, mindful movement and restorative stillness. A supportive space to awaken your inner creativity, nurture self-love and return to your true sense of purpose."
+
+hero_right_content_2: "Each day we gather for yoga - gentle, grounding practices designed to support both body and mind. Through breath, movement and presence, we create space to soften, release and return to ourselves. All levels are welcome - whether you are new to yoga or have practiced for years. These sessions are an invitation to reconnect with your body, cultivate balance, and rediscover a sense of inner calm."
+
+hero_right_content_3: "Your retreat unfolds in two distinct sanctuaries. The first three nights are spent in a serene resort in Ubud, embraced by jungle landscapes and the calming rhythm of nature. The journey then continues with three nights in a private villa on the cliffs of Uluwatu, where the vast ocean horizon invites deep rest and reflection. Accommodation will be in shared double rooms, offering comfort and connection throughout the journey."
+
+hero_right_content_4: "Throughout the retreat you will be guided through a variety of practices — from meditation and sound healing to therapeutic group work. Each session is designed to support emotional wellbeing, release tension and invite deeper clarity. These circles become moments of stillness and connection, offering a safe and nurturing space for restoration, inner balance and renewal."
+
+hero_right_content_5: "As part of your retreat, you will spend two days in a breathtaking cliff-top sanctuary, immersing in spa rituals, thermal waters and ocean views that invite profound rest and renewal. Surrounded by the wild beauty of Bali's nature, these moments become a gentle reset for body, mind and spirit."
+
+hero_right_content_6: "Wholesome, healthy meals are at the heart of this journey - helping you feel lighter, clearer and more alive. Twice a day, nourishing meals will be served - crafted with care by our private chef and complemented by group dinners in Bali's vibrant restaurants. A third meal is left open for your own rhythm, offering space for solitude, exploration or simply listening to your body's needs."
+
+# Checkout Configuration
 checkout:
   full_payment_link: "https://book.stripe.com/9B63co2yt2gubpleADeQM01"
   deposit_link: "https://book.stripe.com/5kQ00cflf1cqeBx647eQM00"
@@ -37,7 +66,7 @@ checkout:
             </svg>
           </div>
           <div class="included-overlay">
-            <h2>WHAT'S INCLUDED</h2>
+            <h3>WHAT'S INCLUDED</h3>
           </div>
         </div>
         <div class="flip-card-back">
@@ -74,7 +103,7 @@ checkout:
             </svg>
           </div>
           <div class="included-overlay">
-            <h2>WHAT'S NOT INCLUDED</h2>
+            <h3>WHAT'S NOT INCLUDED</h3>
           </div>
         </div>
         <div class="flip-card-back">

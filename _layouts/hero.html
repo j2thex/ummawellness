@@ -12,19 +12,19 @@
         <div class="hero-left" style="background-image: url('{{ page.hero_left_image }}');">
             <!-- Logo at top -->
             <div class="hero-logo">
-                <h1 class="logo-text">UMMAWELLNESS</h1>
+                <h1 class="logo-text">{{ page.hero_logo }}</h1>
             </div>
             
             <!-- Retreat details at bottom -->
             <div class="hero-retreat-details">
                 <div class="retreat-info">
-                    <h3>1 WEEK WELLNESS RETREAT</h3>
-                    <p class="retreat-location">LOCATION: BALI</p>
+                    <h3>{{ page.hero_retreat_title }}</h3>
+                    <p class="retreat-location">{{ page.hero_retreat_location }}</p>
                     <div class="retreat-pricing">
-                        <span class="early-bird-price">EARLY BIRD PRICE €3,200</span>
-                        <span class="regular-price">€3,600</span>
+                        <span class="early-bird-price">{{ page.hero_early_bird_price }}</span>
+                        <span class="regular-price">{{ page.hero_regular_price }}</span>
                     </div>
-                    <a href="#pay" class="buy-retreat-button">BUY RETREAT</a>
+                    <a href="#pay" class="buy-retreat-button">{{ page.hero_buy_button }}</a>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                                     </svg>
                                 </div>
                                 <div class="hero-image-overlay">
-                                    <h2>ABOUT</h2>
+                                    <h2>{{ page.hero_right_title_1 }}</h2>
                                 </div>
                             </div>
                             <div class="flip-card-back" style="background-image: url('{{ page.hero_right_image_1 }}');">
@@ -54,7 +54,7 @@
                                     </svg>
                                 </div>
                                 <div class="flip-content">
-                                    <p>Join our carefully curated journey of gentle awakening. Reconnect with life through yoga, somatic practices, mindful movement and restorative stillness. A supportive space to awaken your inner creativity, nurture self-love and return to your true sense of purpose.</p>
+                                    <p>{{ page.hero_right_content_1 }}</p>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     </svg>
                                 </div>
                                 <div class="hero-image-overlay">
-                                    <h2>YOGA FOR BODY & MIND</h2>
+                                    <h2>{{ page.hero_right_title_2 }}</h2>
                                 </div>
                             </div>
                             <div class="flip-card-back" style="background-image: url('{{ page.hero_right_image_2 }}');">
@@ -80,8 +80,7 @@
                                     </svg>
                                 </div>
                                 <div class="flip-content">
-                                    <p>Each day we gather for yoga - gentle, grounding practices designed to support both body and mind. Through breath, movement and presence, we create space to soften, release and return to ourselves.</p>
-                                    <p>All levels are welcome - whether you are new to yoga or have practiced for years. These sessions are an invitation to reconnect with your body, cultivate balance, and rediscover a sense of inner calm.</p>
+                                    <p>{{ page.hero_right_content_2 }}</p>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +99,7 @@
                                     </svg>
                                 </div>
                                 <div class="hero-image-overlay">
-                                    <h2>UBUD & ULUWATU: A JOURNEY IN TWO LANDSCAPES</h2>
+                                    <h2>{{ page.hero_right_title_3 }}</h2>
                                 </div>
                             </div>
                             <div class="flip-card-back" style="background-image: url('{{ page.hero_right_image_3 }}');">
@@ -110,7 +109,7 @@
                                     </svg>
                                 </div>
                                 <div class="flip-content">
-                                    <p>Your retreat unfolds in two distinct sanctuaries. The first three nights are spent in a serene resort in Ubud, embraced by jungle landscapes and the calming rhythm of nature. The journey then continues with three nights in a private villa on the cliffs of Uluwatu, where the vast ocean horizon invites deep rest and reflection. Accommodation will be in shared double rooms, offering comfort and connection throughout the journey. Both settings are chosen with care to provide tranquility and inspiration - spaces that hold you gently and support your renewal.</p>
+                                    <p>{{ page.hero_right_content_3 }}</p>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +125,7 @@
                                     </svg>
                                 </div>
                                 <div class="hero-image-overlay">
-                                    <h2>CIRCLES OF HEALING & PRESENCE</h2>
+                                    <h2>{{ page.hero_right_title_4 }}</h2>
                                 </div>
                             </div>
                             <div class="flip-card-back" style="background-image: url('{{ page.hero_right_image_4 }}');">
@@ -136,8 +135,7 @@
                                     </svg>
                                 </div>
                                 <div class="flip-content">
-                                    <p>Throughout the retreat you will be guided through a variety of practices — from meditation and sound healing to therapeutic group work. Each session is designed to support emotional wellbeing, release tension and invite deeper clarity.</p>
-                                    <p>These circles become moments of stillness and connection, offering a safe and nurturing space for restoration, inner balance and renewal.</p>
+                                    <p>{{ page.hero_right_content_4 }}</p>
                                 </div>
                             </div>
                         </div>
@@ -149,24 +147,24 @@
                     <!-- Fifth Left Image with Flip (Spa Sessions) -->
                     <div class="hero-image-section flip-card" onclick="flipCard(this)">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front" style="background-image: url('/assets/images/spa.png');">
+                            <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_5 }}');">
                                 <div class="flip-icon flip-arrow">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                                 <div class="hero-image-overlay">
-                                    <h2>SPA SESSIONS</h2>
+                                    <h2>{{ page.hero_right_title_5 }}</h2>
                                 </div>
                             </div>
-                            <div class="flip-card-back" style="background-image: url('/assets/images/spa.png');">
+                            <div class="flip-card-back" style="background-image: url('{{ page.hero_right_image_5 }}');">
                                 <div class="flip-icon flip-close">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                                 <div class="flip-content">
-                                    <p>As part of your retreat, you will spend two days in a breathtaking cliff-top sanctuary, immersing in spa rituals, thermal waters and ocean views that invite profound rest and renewal. Surrounded by the wild beauty of Bali's nature, these moments become a gentle reset for body, mind and spirit.</p>
+                                    <p>{{ page.hero_right_content_5 }}</p>
                                 </div>
                             </div>
                         </div>
@@ -175,24 +173,24 @@
                     <!-- Sixth Right Image with Flip (Nutrition) -->
                     <div class="hero-image-section flip-card" onclick="flipCard(this)">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front" style="background-image: url('/assets/images/nutrition.jpg');">
+                            <div class="flip-card-front" style="background-image: url('{{ page.hero_right_image_6 }}');">
                                 <div class="flip-icon flip-arrow">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                                 <div class="hero-image-overlay">
-                                    <h2>NUTRITION</h2>
+                                    <h2>{{ page.hero_right_title_6 }}</h2>
                                 </div>
                             </div>
-                            <div class="flip-card-back" style="background-image: url('/assets/images/nutrition.jpg');">
+                            <div class="flip-card-back" style="background-image: url('{{ page.hero_right_image_6 }}');">
                                 <div class="flip-icon flip-close">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                                 <div class="flip-content">
-                                    <p>Wholesome, healthy meals are at the heart of this journey - helping you feel lighter, clearer and more alive. Twice a day, nourishing meals will be served - crafted with care by our private chef and complemented by group dinners in Bali's vibrant restaurants. A third meal is left open for your own rhythm, offering space for solitude, exploration or simply listening to your body's needs.</p>
+                                    <p>{{ page.hero_right_content_6 }}</p>
                                 </div>
                             </div>
                         </div>
